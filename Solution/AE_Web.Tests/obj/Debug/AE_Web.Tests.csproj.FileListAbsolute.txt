@@ -1,0 +1,12 @@
+P:\SandBox\AngularEntity\AE_Web.Tests\bin\Debug\AE_Web.Tests.dll.config
+P:\SandBox\AngularEntity\AE_Web.Tests\bin\Debug\AE_Web.Tests.dll
+P:\SandBox\AngularEntity\AE_Web.Tests\bin\Debug\AE_Web.Tests.pdb
+P:\SandBox\AngularEntity\AE_Web.Tests\bin\Debug\AE_Web.dll
+P:\SandBox\AngularEntity\AE_Web.Tests\bin\Debug\System.Web.Optimization.dll
+P:\SandBox\AngularEntity\AE_Web.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.dll
+P:\SandBox\AngularEntity\AE_Web.Tests\bin\Debug\AE_Web.pdb
+P:\SandBox\AngularEntity\AE_Web.Tests\bin\Debug\System.Web.Optimization.xml
+P:\SandBox\AngularEntity\AE_Web.Tests\bin\Debug\Microsoft.AspNet.FriendlyUrls.xml
+P:\SandBox\AngularEntity\AE_Web.Tests\obj\Debug\AE_Web.Tests.csprojResolveAssemblyReference.cache
+P:\SandBox\AngularEntity\AE_Web.Tests\obj\Debug\AE_Web.Tests.dll
+P:\SandBox\AngularEntity\AE_Web.Tests\obj\Debug\AE_Web.Tests.pdb
