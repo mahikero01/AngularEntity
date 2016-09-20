@@ -13,12 +13,19 @@ namespace AE_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            LanguageBL test = new LanguageBL();
-            var languages = test.GetAllLanguages();
-            var jsondata = JsonConvert.SerializeObject(languages);
+            
             
         }
 
-        
+        [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
+        public static string LanguagesSelection()
+        {
+            LanguageBL languageBL = new LanguageBL();
+            
+            string jsonData = JsonConvert.SerializeObject(languageBL.GetAllLanguages());
+            languageBL = null;
+            
+            return jsonData;
+        }
     }
 }
