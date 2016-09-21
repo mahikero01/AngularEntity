@@ -41,15 +41,19 @@
             </button>
         </div>
 
+        <br />
+
         <div class="row">
             <div class="form-group">
                 <label class="control-label col-xs-2" for="languageObjSel">Programming Language</label>
                 <select class="form-control col-xs-2"
                     id="languageObjSel"
                     ng-model="languageObjSel"
-                    ng-options="option.LanguageName for option in languageObjects track by option.LanguageId">
+                    ng-options="language.LanguageName for language in languageObjects track by language.LanguageID">
                 </select>
             </div>
         </div>
+
+        Selected Language is:  {{languageObjSel.LanguageID}}
     </div>
 </asp:Content>

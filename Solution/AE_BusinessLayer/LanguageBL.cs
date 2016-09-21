@@ -33,12 +33,12 @@ namespace AE_BusinessLayer
 
             using(var context = new AngularEntityEntities())
             {
-                var languages = from l in context.AE_Languages
+                var languageObjects = from l in context.AE_Languages
                                select l;
 
-                foreach (AE_Languages  language in languages)
+                foreach (AE_Languages languageObject in languageObjects)
                 {
-                    languageList.Add(language);
+                    languageList.Add(languageObject);
                 }
             }
 

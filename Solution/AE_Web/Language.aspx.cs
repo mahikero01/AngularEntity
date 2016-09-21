@@ -30,7 +30,7 @@ namespace AE_Web
         }
 
         [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
-        public string FillUpCompleteLanguageCombo()
+        public static string FillUpCompleteLanguageCombo()
         {
             string msg = "";
             LanguageBL languageBL = new LanguageBL();
