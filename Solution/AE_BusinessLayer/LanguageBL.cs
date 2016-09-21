@@ -1,34 +1,55 @@
-﻿using System;
+﻿using AE_Web;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AE_DataAccessLayer;
-using AE_Web;
 
 namespace AE_BusinessLayer
 {
     public class LanguageBL
     {
-        private LanguageDAL DAL;
+        public string message = "";
 
-        public LanguageBL()
+        public List<string> GetAllLanguageName()
         {
-            this.DAL = new LanguageDAL();
-        }
+            List<string> languageList = new List<string>();
 
-        public List<AE_Languages> GetAllLanguages()
-        {
-            var data = DAL.ReadLanguages();
-
-            List<AE_Languages> languageList = new List<AE_Languages>();
-
-            foreach (AE_Languages language in data)
+            using (var context = new AngularEntityEntities())
             {
-                languageList.Add(language);
+                var languageNames = from l in context.AE_Languages
+                                    select l.LanguageName;
+
+                foreach (string languageName in languageNames)
+                {
+                    languageList.Add(languageName);
+                }
             }
 
             return languageList;
         }
+
+        public bool AddNewLanguage(AE_Languages language)
+        {
+            bool success = true;
+            this.message = BusinessComponents.MSG_LANGUAGEBL_ADDNEWLANGUAGE_SAVEOK;
+
+            using (var context = new AngularEntityEntities())
+            {
+                try
+                {
+                    context.AE_Languages.Add(language);
+                    context.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    success = false;
+                    this.message = BusinessComponents.MSG_LANGUAGEBL_ADDNEWLANGUAGE_SAVEERROR;
+                }
+                
+            }
+
+            return success;
+        }
     }
+
+    
 }

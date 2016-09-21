@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AE_Web.Tests", "AE_Web.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AE_BusinessLayer", "AE_BusinessLayer\AE_BusinessLayer.csproj", "{6AFD87E9-A62B-465F-843A-3C33CF9540D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AE_BusinessEntities", "AE_BusinessEntities\AE_BusinessEntities.csproj", "{2D56BC11-76BD-4F38-A872-93EAE00919A7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AE_DataAccessLayer", "AE_DataAccessLayer\AE_DataAccessLayer.csproj", "{A62355B9-03F8-47CA-A313-87356C822392}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{6AFD87E9-A62B-465F-843A-3C33CF9540D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AFD87E9-A62B-465F-843A-3C33CF9540D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AFD87E9-A62B-465F-843A-3C33CF9540D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D56BC11-76BD-4F38-A872-93EAE00919A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D56BC11-76BD-4F38-A872-93EAE00919A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D56BC11-76BD-4F38-A872-93EAE00919A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D56BC11-76BD-4F38-A872-93EAE00919A7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A62355B9-03F8-47CA-A313-87356C822392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A62355B9-03F8-47CA-A313-87356C822392}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A62355B9-03F8-47CA-A313-87356C822392}.Release|Any CPU.ActiveCfg = Release|Any CPU

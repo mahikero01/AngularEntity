@@ -1,24 +1,36 @@
 ﻿(function (app) {
     var LanguageController = function ($scope, $http) {
-        $http.post('Language.aspx/LanguagesSelection', { data: {} })
-        //languageService.LanguagesSelection()
+        $http
+            .post("Language.aspx/FillUpLanguageCombo", { data: {} })
             .success(function (data, status, headers, config) {
-                //alert(data.d);
-                $scope.testi = JSON.parse(data.d);
-                //$scope.testi = ["Rico", "grace"];
-
+                $scope.languages = JSON.parse(data.d);
             });
-        
+
+        $scope.create = function () {
+            $http
+                ({
+                    method : "POST",
+                    url: "Language.aspx/NewLanguageEntry",
+                    data: "{language:" + JSON.stringify($scope.AE_Language) + "}",
+                    headers: { "Content-Type": "application/json; charset=utf-8" }
+                })
+                .success(function (data, status, headers, config) {
+                    $scope.messageList = JSON.parse(data.d);
+                    
+                    if (angular.equals($scope.messageList[0], "1")) {
+                        alert($scope.messageList[1]);
+                        $scope.languages.push($scope.AE_Language.LanguageName);
+                        $scope.AE_Language = null;
+                        $scope.messageList = null;
+                    }
+                    else {
+                        alert($scope.messageList[1]);
+                        $scope.AE_Language = null;
+                        $scope.messageList = null;
+                    }
+                });
+        };
     };
 
-    //LanguageController.$inject = ["$scope", "languageService"];
-
-    app.controller("LanguageController", LanguageController)
-        //.config(function ($httpProvider) {
-
-        //$httpProvider.defaults.headers.post = {};
-
-        //$httpProvider.defaults.headers.post["Content-Type"] = "application/json; charset=utf-8";
-        //})
-    ;
+    app.controller("LanguageController", LanguageController);
 }(angular.module("angularEntityApp")));

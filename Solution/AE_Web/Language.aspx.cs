@@ -18,16 +18,40 @@ namespace AE_Web
         }
 
         [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
-        //[WebMethod]
-        public static string LanguagesSelection()
+        public static string FillUpLanguageCombo()
         {
+            string msg = "";
             LanguageBL languageBL = new LanguageBL();
 
-            string jsonData = JsonConvert.SerializeObject(languageBL.GetAllLanguages());
+            msg = JsonConvert.SerializeObject(languageBL.GetAllLanguageName());
             languageBL = null;
 
-            return jsonData;
-            //return languageBL.GetAllLanguages();
+            return msg;
+        }
+
+        [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
+        public static string NewLanguageEntry(AE_Languages language)
+        {
+            string msg = "";
+            List<string> messageList = new List<string>();
+            LanguageBL languageBL = new LanguageBL();
+
+            if (languageBL.AddNewLanguage(language))
+            {
+                messageList.Add("1");
+                messageList.Add(languageBL.message);
+            }
+            else 
+            {
+                messageList.Add("2");
+                messageList.Add(languageBL.message);
+            }
+
+            msg = JsonConvert.SerializeObject(messageList);
+            languageBL = null;
+            messageList = null;
+          
+            return msg;
         }
     }
 }

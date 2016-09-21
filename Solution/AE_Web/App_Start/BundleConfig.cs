@@ -34,13 +34,11 @@ namespace AE_Web
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
 
+            //Using AngularJS
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/Scripts/angular.min.js",
                     "~/Scripts Client/angularEntityApp.js",
-                    "~/Scripts Client/languageService.js",
                     "~/Scripts Client/LanguageController.js"));
-
-
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",

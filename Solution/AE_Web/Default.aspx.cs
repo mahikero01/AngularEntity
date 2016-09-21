@@ -18,12 +18,6 @@ namespace AE_Web
             
         }
 
-        [WebMethod]
-        public static string CallMe()
-        {
-
-            return "You called me on " + DateTime.Now.ToString();
-
-        }
+        
     }
 }
