@@ -6,6 +6,12 @@
                 $scope.languages = JSON.parse(data.d);
             });
 
+        $http
+            .post("Language.aspx/FillUpCompleteLanguageCombo", { data: {} })
+            .success(function (data, status, headers, config) {
+                $scope.languageObjects = JSON.parse(data.d);
+            });
+
         $scope.create = function () {
             $http
                 ({

@@ -40,5 +40,16 @@
                 <span aria-hidden="true" class="glyphicon glyphicon-ok"></span> New Record
             </button>
         </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-2" for="languageObjSel">Programming Language</label>
+                <select class="form-control col-xs-2"
+                    id="languageObjSel"
+                    ng-model="languageObjSel"
+                    ng-options="option.LanguageName for option in languageObjects track by option.LanguageId">
+                </select>
+            </div>
+        </div>
     </div>
 </asp:Content>

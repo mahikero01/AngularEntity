@@ -27,6 +27,24 @@ namespace AE_BusinessLayer
             return languageList;
         }
 
+        public List<AE_Languages> GetAllLanguageObject()
+        {
+            List<AE_Languages> languageList = new List<AE_Languages>();
+
+            using(var context = new AngularEntityEntities())
+            {
+                var languages = from l in context.AE_Languages
+                               select l;
+
+                foreach (AE_Languages  language in languages)
+                {
+                    languageList.Add(language);
+                }
+            }
+
+            return languageList;
+        }
+
         public bool AddNewLanguage(AE_Languages language)
         {
             bool success = true;

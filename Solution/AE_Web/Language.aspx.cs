@@ -30,6 +30,18 @@ namespace AE_Web
         }
 
         [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
+        public string FillUpCompleteLanguageCombo()
+        {
+            string msg = "";
+            LanguageBL languageBL = new LanguageBL();
+
+            msg = JsonConvert.SerializeObject(languageBL.GetAllLanguageObject());
+            languageBL = null;
+
+            return msg;
+        }
+
+        [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
         public static string NewLanguageEntry(AE_Languages language)
         {
             string msg = "";
