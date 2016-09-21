@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Newtonsoft.Json;
+using System.Web.Services;
 
 namespace AE_Web
 {
@@ -17,15 +18,12 @@ namespace AE_Web
             
         }
 
-        [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
-        public static string LanguagesSelection()
+        [WebMethod]
+        public static string CallMe()
         {
-            LanguageBL languageBL = new LanguageBL();
-            
-            string jsonData = JsonConvert.SerializeObject(languageBL.GetAllLanguages());
-            languageBL = null;
-            
-            return jsonData;
+
+            return "You called me on " + DateTime.Now.ToString();
+
         }
     }
 }

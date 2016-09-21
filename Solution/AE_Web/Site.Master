@@ -13,9 +13,11 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <asp:PlaceHolder runat="server">        
+         <%: Scripts.Render("~/bundles/angular") %>
+    </asp:PlaceHolder>
 </head>
-<body>
+<body ng-app="angularEntityApp">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
