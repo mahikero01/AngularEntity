@@ -5,32 +5,32 @@
         
         <div class="row">
             <div class="form-group">
-                <label class="control-label col-xs-2" for="languageSel">Programming Language</label>
+                <label class="control-label col-xs-2" for="ShowLanguageName">Programming Language</label>
                 <select class="form-control col-xs-2"
-                    id="languageSel"
-                    ng-model="languageSel"
-                    ng-options="language for language in languages">
+                    id="ShowLanguageName"
+                    
+                    ng-options="Language for Language in Languages">
                 </select>
             </div>
         </div>
         
 
-        Prefered Language is:  {{languageSel}}
+        Prefered Language is:  {{}}
 
         <div class="row">
             <div class="form-group">
-                <label class="control-label col-xs-2" for="languageName">Language Name</label>
+                <label class="control-label col-xs-2" for="CreateLanguageName">Language Name</label>
                 <div class="col-xs-2">
-                    <input class="form-control" type="text" id="languageName" ng-model="AE_Language.LanguageName" />
+                    <input class="form-control" type="text" id="CreateLanguageName" ng-model="Create.LanguageName" />
                 </div>
             </div>
         </div>
 
         <div class="row">
             <div class="form-group">
-                <label class="control-label col-xs-2" for="languageDescr">Language Description</label>
+                <label class="control-label col-xs-2" for="CreateLanguageDescr">Language Description</label>
                 <div class="col-xs-2">
-                    <input class="form-control" type="text" id="languageDescr" ng-model="AE_Language.LanguageDescr" />
+                    <input class="form-control" type="text" id="CreateLanguageDescr" ng-model="Create.LanguageDescr" />
                 </div>
             </div>
         </div>
@@ -45,15 +45,15 @@
 
         <div class="row">
             <div class="form-group">
-                <label class="control-label col-xs-2" for="languageObjSel">Programming Language</label>
+                <label class="control-label col-xs-2" for="SelectLanguageObj">Programming Language</label>
                 <select class="form-control col-xs-2"
-                    id="languageObjSel"
-                    ng-model="languageObjSel"
-                    ng-options="language.LanguageName for language in languageObjects track by language.LanguageID">
+                    id="SelectLanguageObj"
+                    ng-model="Select.LanguageObj"
+                    rico="View.LanguageObject.LanguageName for View.LanguageObject in View.LanguageObjects track by View.LanguageObject.LanguageID">
                 </select>
             </div>
         </div>
 
-        Selected Language is:  {{languageObjSel.LanguageID}}
+        Selected Language is:  {{}}
     </div>
 </asp:Content>
