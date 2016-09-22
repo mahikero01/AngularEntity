@@ -41,12 +41,11 @@
             </button>
         </div>
 
-        <br />
-
         <div class="row">
             <div class="form-group">
                 <label class="control-label col-xs-2" for="SelectLanguageObj">Programming Language</label>
                 <select class="form-control col-xs-2"
+<<<<<<< HEAD
                     id="SelectLanguageObj"
                     ng-model="Select.LanguageObj"
                     rico="View.LanguageObject.LanguageName for View.LanguageObject in View.LanguageObjects track by View.LanguageObject.LanguageID">
@@ -55,5 +54,13 @@
         </div>
 
         Selected Language is:  {{}}
+=======
+                    id="languageObjSel"
+                    ng-model="languageObjSel"
+                    ng-options="option.LanguageName for option in languageObjects track by option.LanguageId">
+                </select>
+            </div>
+        </div>
+>>>>>>> parent of bea74e7... up
     </div>
 </asp:Content>
