@@ -13,7 +13,6 @@ C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\
 C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.xml
 C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.dll
 C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.pdb
 P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\AE_DataAccessLayer.dll

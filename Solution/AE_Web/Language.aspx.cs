@@ -1,12 +1,8 @@
 ﻿using AE_BusinessLayer;
+using AE_DataAccessLayer;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Services;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace AE_Web
 {
@@ -17,9 +13,7 @@ namespace AE_Web
             if (Request.QueryString["fname"] != null)
 
             {
-
                 var rico = Request.QueryString["fname"];
-
             }
         }
 
@@ -59,7 +53,7 @@ namespace AE_Web
                 messageList.Add("1");
                 messageList.Add(languageBL.message);
             }
-            else 
+            else
             {
                 messageList.Add("2");
                 messageList.Add(languageBL.message);
@@ -68,7 +62,7 @@ namespace AE_Web
             msg = JsonConvert.SerializeObject(messageList);
             languageBL = null;
             messageList = null;
-          
+
             return msg;
         }
 

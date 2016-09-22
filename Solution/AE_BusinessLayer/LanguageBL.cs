@@ -1,4 +1,4 @@
-﻿using AE_Web;
+﻿using AE_DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -32,12 +32,12 @@ namespace AE_BusinessLayer
         {
             List<AE_Languages> languageList = new List<AE_Languages>();
 
-            using(var context = new AngularEntityEntities())
+            using (var context = new AngularEntityEntities())
             {
                 var languages = from l in context.AE_Languages
-                               select l;
-                
-                foreach (AE_Languages  language in languages)
+                                select l;
+
+                foreach (AE_Languages language in languages)
                 {
                     languageList.Add(language);
                 }
@@ -63,7 +63,6 @@ namespace AE_BusinessLayer
                     success = false;
                     this.message = BusinessComponents.MSG_LANGUAGEBL_CREATELANGUAGE_SAVEERROR;
                 }
-                
             }
 
             return success;
@@ -86,12 +85,9 @@ namespace AE_BusinessLayer
                     success = false;
                     this.message = BusinessComponents.MSG_LANGUAGEBL_UPDATELANGUAGE_SAVEERROR;
                 }
-
             }
 
             return success;
         }
     }
-
-    
 }

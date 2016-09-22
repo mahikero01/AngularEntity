@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="AngularEntityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="AngularEntityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AE_Languages">
           <Key>
             <PropertyRef Name="LanguageID" />
@@ -13,25 +13,11 @@
           <Property Name="LanguageName" Type="varchar" MaxLength="20" />
           <Property Name="LanguageDescr" Type="varchar" MaxLength="30" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'dbbtCARSAp1.dbo.AE_Yu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="AE_Yu">
-          <Key>
-            <PropertyRef Name="YuName" />
-          </Key>
-          <Property Name="YuID" Type="int" />
-          <Property Name="YuName" Type="int" Nullable="false" />
-        </EntityType>
         <EntityContainer Name="AngularEntityModelStoreContainer">
           <EntitySet Name="AE_Languages" EntityType="Self.AE_Languages" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="AE_Yu" EntityType="Self.AE_Yu" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [AE_Yu].[YuID] AS [YuID], 
-    [AE_Yu].[YuName] AS [YuName]
-    FROM [dbo].[AE_Yu] AS [AE_Yu]</DefiningQuery>
-          </EntitySet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AngularEntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -45,15 +31,7 @@ warning 6002: The table/view 'dbbtCARSAp1.dbo.AE_Yu' does not have a primary key
         </EntityType>
         <EntityContainer Name="AngularEntityEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AE_Languages" EntityType="Self.AE_Languages" />
-          <EntitySet Name="AE_Yu" EntityType="AngularEntityModel.AE_Yu" />
         </EntityContainer>
-        <EntityType Name="AE_Yu">
-          <Key>
-            <PropertyRef Name="YuName" />
-          </Key>
-          <Property Name="YuID" Type="Int32" />
-          <Property Name="YuName" Type="Int32" Nullable="false" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -66,14 +44,6 @@ warning 6002: The table/view 'dbbtCARSAp1.dbo.AE_Yu' does not have a primary key
                 <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
                 <ScalarProperty Name="LanguageName" ColumnName="LanguageName" />
                 <ScalarProperty Name="LanguageDescr" ColumnName="LanguageDescr" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="AE_Yu">
-            <EntityTypeMapping TypeName="AngularEntityModel.AE_Yu">
-              <MappingFragment StoreEntitySet="AE_Yu">
-                <ScalarProperty Name="YuName" ColumnName="YuName" />
-                <ScalarProperty Name="YuID" ColumnName="YuID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

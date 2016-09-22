@@ -10,13 +10,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="AE_Yu">
-      <EntityTypeMapping TypeName="AngularEntityModel.AE_Yu">
-        <MappingFragment StoreEntitySet="AE_Yu">
-          <ScalarProperty Name="YuName" ColumnName="YuName" />
-          <ScalarProperty Name="YuID" ColumnName="YuID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -53,9 +53,6 @@
     <Compile Include="AE_Languages.cs">
       <DependentUpon>AngularEntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="AE_Yu.cs">
-      <DependentUpon>AngularEntityModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="AngularEntityModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,24 +75,25 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AngularEntityModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="AngularEntityModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AngularEntityModel.edmx</DependentUpon>
-      <LastGenOutput>AngularEntityModel.Context.cs</LastGenOutput>
-    </None>
     <None Include="AngularEntityModel.edmx.diagram">
       <DependentUpon>AngularEntityModel.edmx</DependentUpon>
     </None>
-    <None Include="AngularEntityModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AngularEntityModel.edmx</DependentUpon>
-      <LastGenOutput>AngularEntityModel.cs</LastGenOutput>
-    </None>
-    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AngularEntityModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AngularEntityModel.edmx</DependentUpon>
+      <LastGenOutput>AngularEntityModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AngularEntityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AngularEntityModel.edmx</DependentUpon>
+      <LastGenOutput>AngularEntityModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

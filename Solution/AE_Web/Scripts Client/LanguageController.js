@@ -53,8 +53,6 @@
                     if (angular.equals($scope.messageList[0], "1")) {
                         alert($scope.messageList[1]);
                         updateComboBox();
-                        //$scope.LanguagePage.Languages.push($scope.Create.Show.LanguageObject);
-                       // $scope.LanguagePage.LanguageObjects.push($scope.Create);
                         $scope.Create = null;
                         $scope.messageList = null;
                     }

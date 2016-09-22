@@ -26,6 +26,5 @@ namespace AE_DataAccessLayer
         }
     
         public virtual DbSet<AE_Languages> AE_Languages { get; set; }
-        public virtual DbSet<AE_Yu> AE_Yu { get; set; }
     }
 }
