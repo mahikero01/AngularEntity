@@ -78,6 +78,7 @@
     <None Include="AngularEntityModel.edmx.diagram">
       <DependentUpon>AngularEntityModel.edmx</DependentUpon>
     </None>
+    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
