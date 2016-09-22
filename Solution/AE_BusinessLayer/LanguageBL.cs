@@ -1,6 +1,7 @@
 ﻿using AE_Web;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace AE_BusinessLayer
@@ -9,7 +10,7 @@ namespace AE_BusinessLayer
     {
         public string message = "";
 
-        public List<string> GetAllLanguageName()
+        public List<string> ReadAllLanguageName()
         {
             List<string> languageList = new List<string>();
 
@@ -27,7 +28,7 @@ namespace AE_BusinessLayer
             return languageList;
         }
 
-        public List<AE_Languages> GetAllLanguageObject()
+        public List<AE_Languages> ReadAllLanguageObject()
         {
             List<AE_Languages> languageList = new List<AE_Languages>();
 
@@ -45,10 +46,10 @@ namespace AE_BusinessLayer
             return languageList;
         }
 
-        public bool AddNewLanguage(AE_Languages language)
+        public bool CreateLanguage(AE_Languages language)
         {
             bool success = true;
-            this.message = BusinessComponents.MSG_LANGUAGEBL_ADDNEWLANGUAGE_SAVEOK;
+            this.message = BusinessComponents.MSG_LANGUAGEBL_CREATELANGUAGE_SAVEOK;
 
             using (var context = new AngularEntityEntities())
             {
@@ -60,9 +61,32 @@ namespace AE_BusinessLayer
                 catch (Exception e)
                 {
                     success = false;
-                    this.message = BusinessComponents.MSG_LANGUAGEBL_ADDNEWLANGUAGE_SAVEERROR;
+                    this.message = BusinessComponents.MSG_LANGUAGEBL_CREATELANGUAGE_SAVEERROR;
                 }
                 
+            }
+
+            return success;
+        }
+
+        public bool UpdateLanguage(AE_Languages language)
+        {
+            bool success = true;
+            this.message = BusinessComponents.MSG_LANGUAGEBL_UPDATELANGUAGE_SAVEOK;
+
+            using (var context = new AngularEntityEntities())
+            {
+                try
+                {
+                    context.Entry(language).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    success = false;
+                    this.message = BusinessComponents.MSG_LANGUAGEBL_UPDATELANGUAGE_SAVEERROR;
+                }
+
             }
 
             return success;

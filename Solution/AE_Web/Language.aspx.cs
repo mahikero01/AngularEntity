@@ -14,7 +14,13 @@ namespace AE_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["fname"] != null)
 
+            {
+
+                var rico = Request.QueryString["fname"];
+
+            }
         }
 
         [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
@@ -23,19 +29,19 @@ namespace AE_Web
             string msg = "";
             LanguageBL languageBL = new LanguageBL();
 
-            msg = JsonConvert.SerializeObject(languageBL.GetAllLanguageName());
+            msg = JsonConvert.SerializeObject(languageBL.ReadAllLanguageName());
             languageBL = null;
 
             return msg;
         }
 
         [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
-        public string FillUpCompleteLanguageCombo()
+        public static string FillUpCompleteLanguageCombo()
         {
             string msg = "";
             LanguageBL languageBL = new LanguageBL();
 
-            msg = JsonConvert.SerializeObject(languageBL.GetAllLanguageObject());
+            msg = JsonConvert.SerializeObject(languageBL.ReadAllLanguageObject());
             languageBL = null;
 
             return msg;
@@ -48,7 +54,7 @@ namespace AE_Web
             List<string> messageList = new List<string>();
             LanguageBL languageBL = new LanguageBL();
 
-            if (languageBL.AddNewLanguage(language))
+            if (languageBL.CreateLanguage(language))
             {
                 messageList.Add("1");
                 messageList.Add(languageBL.message);
@@ -63,6 +69,31 @@ namespace AE_Web
             languageBL = null;
             messageList = null;
           
+            return msg;
+        }
+
+        [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
+        public static string ModifyExistingLanguage(AE_Languages language)
+        {
+            string msg = "";
+            List<string> messageList = new List<string>();
+            LanguageBL languageBL = new LanguageBL();
+
+            if (languageBL.UpdateLanguage(language))
+            {
+                messageList.Add("1");
+                messageList.Add(languageBL.message);
+            }
+            else
+            {
+                messageList.Add("2");
+                messageList.Add(languageBL.message);
+            }
+
+            msg = JsonConvert.SerializeObject(messageList);
+            languageBL = null;
+            messageList = null;
+
             return msg;
         }
     }
