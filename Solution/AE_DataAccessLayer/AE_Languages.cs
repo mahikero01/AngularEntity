@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AE_Web
+namespace AE_DataAccessLayer
 {
     using System;
     using System.Collections.Generic;

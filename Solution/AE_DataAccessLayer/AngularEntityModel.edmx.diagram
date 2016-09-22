@@ -4,8 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1a26b855f9994452915b334fc35adc4a" Name="Diagram1">
+      <Diagram DiagramId="6f4dc770aade48dca50e128e396c449c" Name="Diagram1">
         <EntityTypeShape EntityType="AngularEntityModel.AE_Languages" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AngularEntityModel.AE_Yu" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

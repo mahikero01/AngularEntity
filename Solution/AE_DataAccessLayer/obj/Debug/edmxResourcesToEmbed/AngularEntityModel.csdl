@@ -10,5 +10,13 @@
   </EntityType>
   <EntityContainer Name="AngularEntityEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AE_Languages" EntityType="Self.AE_Languages" />
+    <EntitySet Name="AE_Yu" EntityType="AngularEntityModel.AE_Yu" />
   </EntityContainer>
+  <EntityType Name="AE_Yu">
+    <Key>
+      <PropertyRef Name="YuName" />
+    </Key>
+    <Property Name="YuID" Type="Int32" />
+    <Property Name="YuName" Type="String" Nullable="false" />
+  </EntityType>
 </Schema>

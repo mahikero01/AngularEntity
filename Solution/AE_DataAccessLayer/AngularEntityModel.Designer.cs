@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'P:\SandBox\AngularEntity\AE_Web\AngularEntityModel.edmx'. 
+﻿// T4 code generation is enabled for model 'P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\AngularEntityModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

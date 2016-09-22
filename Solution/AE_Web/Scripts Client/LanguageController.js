@@ -52,6 +52,7 @@
 
                     if (angular.equals($scope.messageList[0], "1")) {
                         alert($scope.messageList[1]);
+                        updateComboBox();
                         //$scope.LanguagePage.Languages.push($scope.Create.Show.LanguageObject);
                        // $scope.LanguagePage.LanguageObjects.push($scope.Create);
                         $scope.Create = null;
@@ -62,6 +63,20 @@
                         $scope.Create = null;
                         $scope.messageList = null;
                     }
+                });
+        };
+
+        var updateComboBox = function () {
+            $http
+                .post("Language.aspx/FillUpLanguageCombo", { data: {} })
+                .success(function (data, status, headers, config) {
+                    $scope.LanguagePage.Languages = JSON.parse(data.d);
+                });
+
+            $http
+                .post("Language.aspx/FillUpCompleteLanguageCombo", { data: {} })
+                .success(function (data, status, headers, config) {
+                    $scope.LanguagePage.LanguageObjects = JSON.parse(data.d);
                 });
         };
     };

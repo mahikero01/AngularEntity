@@ -53,20 +53,23 @@
     <Compile Include="AE_Languages.cs">
       <DependentUpon>AngularEntityModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="AE_Yu.cs">
+      <DependentUpon>AngularEntityModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="AngularEntityModel.Context.cs">
-      <DependentUpon>AngularEntityModel.Context.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>AngularEntityModel.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="AngularEntityModel.cs">
-      <DependentUpon>AngularEntityModel.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>AngularEntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="AngularEntityModel.Designer.cs">
-      <DependentUpon>AngularEntityModel.edmx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>AngularEntityModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -75,19 +78,20 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AngularEntityModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="AngularEntityModel.Context.tt">
+    <None Include="AngularEntityModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AngularEntityModel.edmx</DependentUpon>
       <LastGenOutput>AngularEntityModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="AngularEntityModel.edmx.diagram">
+    </None>
+    <None Include="AngularEntityModel.edmx.diagram">
       <DependentUpon>AngularEntityModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="AngularEntityModel.tt">
+    </None>
+    <None Include="AngularEntityModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AngularEntityModel.edmx</DependentUpon>
       <LastGenOutput>AngularEntityModel.cs</LastGenOutput>
-    </Content>
+    </None>
+    <None Include="App.Config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

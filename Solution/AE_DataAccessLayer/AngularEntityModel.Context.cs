@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AE_Web
+namespace AE_DataAccessLayer
 {
     using System;
     using System.Data.Entity;
@@ -26,5 +26,6 @@ namespace AE_Web
         }
     
         public virtual DbSet<AE_Languages> AE_Languages { get; set; }
+        public virtual DbSet<AE_Yu> AE_Yu { get; set; }
     }
 }
