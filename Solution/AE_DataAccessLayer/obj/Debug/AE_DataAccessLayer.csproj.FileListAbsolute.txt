@@ -25,3 +25,4 @@ P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLaye
 P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.dll
 P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.pdb
 C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\AE_DataAccessLayer.dll.config
+P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\AE_DataAccessLayer.dll.config

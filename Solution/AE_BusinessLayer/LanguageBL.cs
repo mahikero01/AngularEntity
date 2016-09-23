@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using AE_DataAccessLayer;
+using System.Data.SqlClient;
 
 namespace AE_BusinessLayer
 {
@@ -88,6 +89,24 @@ namespace AE_BusinessLayer
             }
 
             return success;
+        }
+
+        public List<string> STReadLanguageID(string languageName = "", string languageDescr = "")
+        {
+            List<string> languageIDList = new List<string>();
+
+            using (var context = new AngularEntityEntities())
+            {
+                var languages = context.AE_Language_ReadLanguageID(languageName, languageDescr);
+
+
+                foreach (AE_Languages language in languages)
+                {
+                    languageIDList.Add(language.LanguageID.ToString());
+                }
+            }
+
+            return languageIDList;
         }
     }
 }

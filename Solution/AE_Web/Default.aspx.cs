@@ -14,7 +14,8 @@ namespace AE_Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //var test = new LanguageBL();
+            //test.STReadLanguageID("P","");
             
         }
 

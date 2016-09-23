@@ -10,5 +10,9 @@
   </EntityType>
   <EntityContainer Name="AngularEntityEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AE_Languages" EntityType="Self.AE_Languages" />
+    <FunctionImport Name="AE_Language_ReadLanguageID" EntitySet="AE_Languages" ReturnType="Collection(AngularEntityModel.AE_Languages)">
+      <Parameter Name="LanguageName" Mode="In" Type="String" />
+      <Parameter Name="LanguageDescr" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>

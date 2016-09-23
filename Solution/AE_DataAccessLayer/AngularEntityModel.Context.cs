@@ -12,6 +12,8 @@ namespace AE_DataAccessLayer
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class AngularEntityEntities : DbContext
     {
@@ -26,5 +28,31 @@ namespace AE_DataAccessLayer
         }
     
         public virtual DbSet<AE_Languages> AE_Languages { get; set; }
+    
+        public virtual ObjectResult<AE_Languages> AE_Language_ReadLanguageID(string languageName, string languageDescr)
+        {
+            var languageNameParameter = languageName != null ?
+                new ObjectParameter("LanguageName", languageName) :
+                new ObjectParameter("LanguageName", typeof(string));
+    
+            var languageDescrParameter = languageDescr != null ?
+                new ObjectParameter("LanguageDescr", languageDescr) :
+                new ObjectParameter("LanguageDescr", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<AE_Languages>("AE_Language_ReadLanguageID", languageNameParameter, languageDescrParameter);
+        }
+    
+        public virtual ObjectResult<AE_Languages> AE_Language_ReadLanguageID(string languageName, string languageDescr, MergeOption mergeOption)
+        {
+            var languageNameParameter = languageName != null ?
+                new ObjectParameter("LanguageName", languageName) :
+                new ObjectParameter("LanguageName", typeof(string));
+    
+            var languageDescrParameter = languageDescr != null ?
+                new ObjectParameter("LanguageDescr", languageDescr) :
+                new ObjectParameter("LanguageDescr", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<AE_Languages>("AE_Language_ReadLanguageID", mergeOption, languageNameParameter, languageDescrParameter);
+        }
     }
 }

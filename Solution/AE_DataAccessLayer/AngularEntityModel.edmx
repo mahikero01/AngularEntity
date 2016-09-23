@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="AngularEntityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="AngularEntityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AE_Languages">
           <Key>
             <PropertyRef Name="LanguageID" />
@@ -13,6 +13,10 @@
           <Property Name="LanguageName" Type="varchar" MaxLength="20" />
           <Property Name="LanguageDescr" Type="varchar" MaxLength="30" />
         </EntityType>
+        <Function Name="AE_Language_ReadLanguageID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LanguageName" Type="varchar" Mode="In" />
+          <Parameter Name="LanguageDescr" Type="varchar" Mode="In" />
+        </Function>
         <EntityContainer Name="AngularEntityModelStoreContainer">
           <EntitySet Name="AE_Languages" EntityType="Self.AE_Languages" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -30,6 +34,10 @@
         </EntityType>
         <EntityContainer Name="AngularEntityEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AE_Languages" EntityType="Self.AE_Languages" />
+          <FunctionImport Name="AE_Language_ReadLanguageID" EntitySet="AE_Languages" ReturnType="Collection(AngularEntityModel.AE_Languages)">
+            <Parameter Name="LanguageName" Mode="In" Type="String" />
+            <Parameter Name="LanguageDescr" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -46,6 +54,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AE_Language_ReadLanguageID" FunctionName="AngularEntityModel.Store.AE_Language_ReadLanguageID" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

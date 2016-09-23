@@ -10,5 +10,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AE_Language_ReadLanguageID" FunctionName="AngularEntityModel.Store.AE_Language_ReadLanguageID" />
   </EntityContainerMapping>
 </Mapping>

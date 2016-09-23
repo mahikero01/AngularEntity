@@ -48,10 +48,15 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLayer\LanguageBLTests.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AE_BusinessLayer\AE_BusinessLayer.csproj">
+      <Project>{6afd87e9-a62b-465f-843a-3c33cf9540d5}</Project>
+      <Name>AE_BusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\AE_Web\AE_Web.csproj">
       <Project>{9504163C-C011-4E3F-8E69-4B589034C812}</Project>
       <Name>AE_Web</Name>
