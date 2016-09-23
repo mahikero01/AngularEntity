@@ -90,5 +90,18 @@ namespace AE_Web
 
             return msg;
         }
+
+        [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
+        public static string GetLanguageIDList(string languageName)
+        {
+            string msg = "";
+
+            LanguageBL languageBL = new LanguageBL();
+
+            msg = JsonConvert.SerializeObject(languageBL.STReadLanguageID(languageName, ""));
+            languageBL = null;
+
+            return msg;
+        }
     }
 }

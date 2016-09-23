@@ -64,6 +64,19 @@
                 });
         };
 
+        $scope.findID = function () {
+            $http
+                ({
+                    method: "POST",
+                    url: "Language.aspx/GetLanguageIDList",
+                    data: "{languageName:" + JSON.stringify($scope.Find.LanguageName) + "}",
+                    headers: { "Content-Type": "application/json; charset=utf-8" }
+                })
+                .success(function (data, status, headers, config) {
+                    $scope.LanguagePage.LanguageIDs = JSON.parse(data.d);
+                });
+        };
+
         var updateComboBox = function () {
             $http
                 .post("Language.aspx/FillUpLanguageCombo", { data: {} })
