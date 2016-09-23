@@ -54,5 +54,10 @@ namespace AE_DataAccessLayer
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<AE_Languages>("AE_Language_ReadLanguageID", mergeOption, languageNameParameter, languageDescrParameter);
         }
+    
+        public virtual int AE_Language_DeleteLanguageName()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AE_Language_DeleteLanguageName");
+        }
     }
 }

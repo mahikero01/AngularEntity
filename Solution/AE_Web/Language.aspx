@@ -127,6 +127,13 @@
             </tr>
         </table>
          
+        <div class="row">
+            <button type="button" class="btn-responsive btn btn-danger col-xs-2" 
+                ng-click="deleteLanguage()">
+                <span aria-hidden="true" class="glyphicon glyphicon-ok"></span> Delete Language Start with "J"
+            </button>
+        </div>
+
     </div>
     
 

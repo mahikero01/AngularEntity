@@ -13,6 +13,7 @@
           <Property Name="LanguageName" Type="varchar" MaxLength="20" />
           <Property Name="LanguageDescr" Type="varchar" MaxLength="30" />
         </EntityType>
+        <Function Name="AE_Language_DeleteLanguageName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="AE_Language_ReadLanguageID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="LanguageName" Type="varchar" Mode="In" />
           <Parameter Name="LanguageDescr" Type="varchar" Mode="In" />
@@ -38,6 +39,7 @@
             <Parameter Name="LanguageName" Mode="In" Type="String" />
             <Parameter Name="LanguageDescr" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="AE_Language_DeleteLanguageName" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -55,6 +57,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="AE_Language_ReadLanguageID" FunctionName="AngularEntityModel.Store.AE_Language_ReadLanguageID" />
+          <FunctionImportMapping FunctionImportName="AE_Language_DeleteLanguageName" FunctionName="AngularEntityModel.Store.AE_Language_DeleteLanguageName" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

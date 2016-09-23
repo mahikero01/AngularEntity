@@ -16,7 +16,7 @@ namespace AE_Web
         {
             //var test = new LanguageBL();
             //test.STReadLanguageID("P","");
-            
+            //test.STDeleteLangauageNameJ();
         }
 
         

@@ -53,12 +53,10 @@
                     if (angular.equals($scope.messageList[0], "1")) {
                         alert($scope.messageList[1]);
                         updateComboBox();
-                        $scope.Create = null;
                         $scope.messageList = null;
                     }
                     else {
                         alert($scope.messageList[1]);
-                        $scope.Create = null;
                         $scope.messageList = null;
                     }
                 });
@@ -75,6 +73,24 @@
                 .success(function (data, status, headers, config) {
                     $scope.LanguagePage.LanguageIDs = JSON.parse(data.d);
                 });
+        };
+
+        $scope.deleteLanguage = function () {
+            $http
+            .post("Language.aspx/RemoveLanguageNameStartWithJ", { data: {} })
+            .success(function (data, status, headers, config) {
+                $scope.messageList = JSON.parse(data.d);
+
+                if (angular.equals($scope.messageList[0], "1")) {
+                    alert($scope.messageList[1]);
+                    updateComboBox();
+                    $scope.messageList = null;
+                }
+                else {
+                    alert($scope.messageList[1]);
+                    $scope.messageList = null;
+                }
+            });
         };
 
         var updateComboBox = function () {

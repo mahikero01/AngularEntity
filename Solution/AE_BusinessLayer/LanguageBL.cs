@@ -108,5 +108,27 @@ namespace AE_BusinessLayer
 
             return languageIDList;
         }
+
+        public bool STDeleteLangauageNameJ()
+        {
+            bool success = true;
+            this.message = BusinessComponents.MSG_LANGUAGEBL_STDELETELANGUAGENAMEJ_OK;
+
+            using (var context = new AngularEntityEntities())
+            {
+
+                try
+                {
+                    context.AE_Language_DeleteLanguageName();
+                    context.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    success = false;
+                    this.message = BusinessComponents.MSG_LANGUAGEBL_STDELETELANGUAGENAMEJ_ERR;
+                }
+            }
+            return success;
+        }
     }
 }

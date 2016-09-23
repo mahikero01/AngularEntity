@@ -103,5 +103,30 @@ namespace AE_Web
 
             return msg;
         }
+
+        [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
+        public static string RemoveLanguageNameStartWithJ()
+        {
+            string msg = "";
+            List<string> messageList = new List<string>();
+            LanguageBL languageBL = new LanguageBL();
+
+            if (languageBL.STDeleteLangauageNameJ())
+            {
+                messageList.Add("1");
+                messageList.Add(languageBL.message);
+            }
+            else
+            {
+                messageList.Add("2");
+                messageList.Add(languageBL.message);
+            }
+
+            msg = JsonConvert.SerializeObject(messageList);
+            languageBL = null;
+            messageList = null;
+
+            return msg;
+        }
     }
 }
