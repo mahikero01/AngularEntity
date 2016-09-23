@@ -24,5 +24,4 @@ P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.S
 P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.csprojResolveAssemblyReference.cache
 P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.dll
 P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.pdb
-P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\AE_DataAccessLayer.dll.config
 C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\AE_DataAccessLayer.dll.config

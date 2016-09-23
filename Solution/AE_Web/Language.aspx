@@ -51,6 +51,39 @@
         <br />
 
         <br />
+        <br />
+
+        <br />
+        <br />
+
+        <br />
+        <br />
+
+        <br />
+         <br />
+
+        <br />
+        <br />
+
+        <br />
+        <br />
+
+        <br />
+        <br />
+
+        <br />
+         <br />
+
+        <br />
+        <br />
+
+        <br />
+        <br />
+
+        <br />
+        <br />
+
+        <br />
         <div class="row">
             <div class="form-group">
                 <label class="control-label col-xs-2" for="SelectLanguageObj">Programming Language</label>
@@ -97,4 +130,28 @@
         
     </div>
     
+
+
+    <br />
+    <br />
+
+
+            <div class="row">
+            <div class="form-group">
+                <label class="control-label col-xs-2" for="CreateLanguageDescr">Language Description</label>
+                <div class="col-xs-2">
+                    <input class="form-control" type="text" id="CreateLanguageDescr" name="CreateLanguageDescr" ng-model="Create.LanguageDescr" required/>
+                </div>
+            </div>
+        </div>
+
+        Input is: {{AngularEntity.CreateLanguageDescr.$valid}}
+
+        <div class="row">
+            <button type="button" class="btn-responsive btn btn-success col-xs-2" 
+                ng-disabled="!AngularEntity.CreateLanguageName.$valid || !AngularEntity.CreateLanguageDescr.$valid"
+                ng-click="AngularEntity.CreateLanguageName.$valid && AngularEntity.CreateLanguageDescr.$valid && create()">
+                <span aria-hidden="true" class="glyphicon glyphicon-ok"></span> New Record
+            </button>
+        </div>
 </asp:Content>
