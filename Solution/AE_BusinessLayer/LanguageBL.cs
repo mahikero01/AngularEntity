@@ -1,9 +1,8 @@
-﻿using System;
+﻿using AE_DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using AE_DataAccessLayer;
-using System.Data.SqlClient;
 
 namespace AE_BusinessLayer
 {
@@ -99,7 +98,6 @@ namespace AE_BusinessLayer
             {
                 var languages = context.AE_Language_ReadLanguageID(languageName, languageDescr);
 
-
                 foreach (AE_Languages language in languages)
                 {
                     languageIDList.Add(language.LanguageID.ToString());
@@ -116,7 +114,6 @@ namespace AE_BusinessLayer
 
             using (var context = new AngularEntityEntities())
             {
-
                 try
                 {
                     context.AE_Language_DeleteLanguageName();
