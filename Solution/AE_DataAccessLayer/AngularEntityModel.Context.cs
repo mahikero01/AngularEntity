@@ -15,7 +15,7 @@ namespace AE_DataAccessLayer
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class AngularEntityEntities : DbContext
+    public partial class AngularEntityEntities : DbContext, IAngularEntityContext
     {
         public AngularEntityEntities()
             : base("name=AngularEntityEntities")

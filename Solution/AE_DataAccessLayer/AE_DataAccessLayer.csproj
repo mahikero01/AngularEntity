@@ -68,6 +68,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AngularEntityModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="IAngularEntityContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +90,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AngularEntityModel.edmx</DependentUpon>
       <LastGenOutput>AngularEntityModel.Context.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="AngularEntityModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

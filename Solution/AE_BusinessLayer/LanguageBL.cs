@@ -8,21 +8,45 @@ namespace AE_BusinessLayer
 {
     public class LanguageBL
     {
-        public string message = "";
+        private IAngularEntityContext _context;
+        public string _message = "";
+
+        public LanguageBL(IAngularEntityContext context)
+        {
+            _context = context;
+        }
+
+        public bool CreateLanguage(string name, string description)
+        {
+            var language = new AE_Languages { LanguageName = name, LanguageDescr = description };
+            bool success = true;
+
+            _message = BusinessComponents.MSG_LANGUAGEBL_CREATELANGUAGE_SAVEOK;
+            try
+            {
+                _context.AE_Languages.Add(language);
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                success = false;
+                _message = BusinessComponents.MSG_LANGUAGEBL_CREATELANGUAGE_SAVEERROR;
+                _message += " Runtime Error: " + e.Message;
+            }
+
+            return success;
+        }
 
         public List<string> ReadAllLanguageName()
         {
             List<string> languageList = new List<string>();
 
-            using (var context = new AngularEntityEntities())
-            {
-                var languageNames = from l in context.AE_Languages
-                                    select l.LanguageName;
+            var languageNames = from l in _context.AE_Languages
+                                select l.LanguageName;
 
-                foreach (string languageName in languageNames)
-                {
-                    languageList.Add(languageName);
-                }
+            foreach (string languageName in languageNames)
+            {
+                languageList.Add(languageName);
             }
 
             return languageList;
@@ -32,59 +56,32 @@ namespace AE_BusinessLayer
         {
             List<AE_Languages> languageList = new List<AE_Languages>();
 
-            using (var context = new AngularEntityEntities())
-            {
-                var languages = from l in context.AE_Languages
-                                select l;
+            var languages = from l in _context.AE_Languages
+                            select l;
 
-                foreach (AE_Languages language in languages)
-                {
-                    languageList.Add(language);
-                }
+            foreach (AE_Languages language in languages)
+            {
+                languageList.Add(language);
             }
 
             return languageList;
         }
 
-        public bool CreateLanguage(AE_Languages language)
-        {
-            bool success = true;
-            this.message = BusinessComponents.MSG_LANGUAGEBL_CREATELANGUAGE_SAVEOK;
-
-            using (var context = new AngularEntityEntities())
-            {
-                try
-                {
-                    context.AE_Languages.Add(language);
-                    context.SaveChanges();
-                }
-                catch (Exception e)
-                {
-                    success = false;
-                    this.message = BusinessComponents.MSG_LANGUAGEBL_CREATELANGUAGE_SAVEERROR;
-                }
-            }
-
-            return success;
-        }
-
         public bool UpdateLanguage(AE_Languages language)
         {
             bool success = true;
-            this.message = BusinessComponents.MSG_LANGUAGEBL_UPDATELANGUAGE_SAVEOK;
+            _message = BusinessComponents.MSG_LANGUAGEBL_UPDATELANGUAGE_SAVEOK;
 
-            using (var context = new AngularEntityEntities())
+            try
             {
-                try
-                {
-                    context.Entry(language).State = EntityState.Modified;
-                    context.SaveChanges();
-                }
-                catch (Exception e)
-                {
-                    success = false;
-                    this.message = BusinessComponents.MSG_LANGUAGEBL_UPDATELANGUAGE_SAVEERROR;
-                }
+                _context.Entry(language).State = EntityState.Modified;
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                success = false;
+                _message = BusinessComponents.MSG_LANGUAGEBL_UPDATELANGUAGE_SAVEERROR;
+                _message += " Runtime Error: " + e.Message;
             }
 
             return success;
@@ -94,37 +91,33 @@ namespace AE_BusinessLayer
         {
             List<string> languageIDList = new List<string>();
 
-            using (var context = new AngularEntityEntities())
+            var languages = _context.AE_Language_ReadLanguageID(languageName, languageDescr);
+
+            foreach (AE_Languages language in languages)
             {
-                var languages = context.AE_Language_ReadLanguageID(languageName, languageDescr);
-
-                foreach (AE_Languages language in languages)
-                {
-                    languageIDList.Add(language.LanguageID.ToString());
-                }
+                languageIDList.Add(language.LanguageID.ToString());
             }
-
+            
             return languageIDList;
         }
 
         public bool STDeleteLangauageNameJ()
         {
             bool success = true;
-            this.message = BusinessComponents.MSG_LANGUAGEBL_STDELETELANGUAGENAMEJ_OK;
+            _message = BusinessComponents.MSG_LANGUAGEBL_STDELETELANGUAGENAMEJ_OK;
 
-            using (var context = new AngularEntityEntities())
+            try
             {
-                try
-                {
-                    context.AE_Language_DeleteLanguageName();
-                    context.SaveChanges();
-                }
-                catch (Exception e)
-                {
-                    success = false;
-                    this.message = BusinessComponents.MSG_LANGUAGEBL_STDELETELANGUAGENAMEJ_ERR;
-                }
+                _context.AE_Language_DeleteLanguageName();
+                _context.SaveChanges();
             }
+            catch (Exception e)
+            {
+                success = false;
+                _message = BusinessComponents.MSG_LANGUAGEBL_STDELETELANGUAGENAMEJ_ERR;
+                _message += " Runtime Error: " + e.Message;
+            }
+            
             return success;
         }
     }

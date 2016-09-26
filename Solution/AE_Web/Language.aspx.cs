@@ -17,14 +17,44 @@ namespace AE_Web
             }
         }
 
+
+        [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
+        public static string NewLanguageEntry(AE_Languages language)
+        {
+            string msg = "";
+            List<string> messageList = new List<string>();
+            var context = new AngularEntityEntities();
+            var languageBL = new LanguageBL(context);
+
+            if (languageBL.CreateLanguage(language.LanguageName, language.LanguageDescr))
+            {
+                messageList.Add("1");
+                messageList.Add(languageBL._message);
+            }
+            else
+            {
+                messageList.Add("2");
+                messageList.Add(languageBL._message);
+            }
+
+            msg = JsonConvert.SerializeObject(messageList);
+            languageBL = null;
+            context = null;
+            messageList = null;
+
+            return msg;
+        }
+
         [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
         public static string FillUpLanguageCombo()
         {
             string msg = "";
-            LanguageBL languageBL = new LanguageBL();
+            var context = new AngularEntityEntities();
+            var languageBL = new LanguageBL(context);
 
             msg = JsonConvert.SerializeObject(languageBL.ReadAllLanguageName());
             languageBL = null;
+            context = null;
 
             return msg;
         }
@@ -33,59 +63,40 @@ namespace AE_Web
         public static string FillUpCompleteLanguageCombo()
         {
             string msg = "";
-            LanguageBL languageBL = new LanguageBL();
+            var context = new AngularEntityEntities();
+            var languageBL = new LanguageBL(context);
 
             msg = JsonConvert.SerializeObject(languageBL.ReadAllLanguageObject());
             languageBL = null;
+            context = null;
 
             return msg;
         }
 
-        [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
-        public static string NewLanguageEntry(AE_Languages language)
-        {
-            string msg = "";
-            List<string> messageList = new List<string>();
-            LanguageBL languageBL = new LanguageBL();
-
-            if (languageBL.CreateLanguage(language))
-            {
-                messageList.Add("1");
-                messageList.Add(languageBL.message);
-            }
-            else
-            {
-                messageList.Add("2");
-                messageList.Add(languageBL.message);
-            }
-
-            msg = JsonConvert.SerializeObject(messageList);
-            languageBL = null;
-            messageList = null;
-
-            return msg;
-        }
+        
 
         [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
         public static string ModifyExistingLanguage(AE_Languages language)
         {
             string msg = "";
             List<string> messageList = new List<string>();
-            LanguageBL languageBL = new LanguageBL();
+            var context = new AngularEntityEntities();
+            var languageBL = new LanguageBL(context);
 
             if (languageBL.UpdateLanguage(language))
             {
                 messageList.Add("1");
-                messageList.Add(languageBL.message);
+                messageList.Add(languageBL._message);
             }
             else
             {
                 messageList.Add("2");
-                messageList.Add(languageBL.message);
+                messageList.Add(languageBL._message);
             }
 
             msg = JsonConvert.SerializeObject(messageList);
             languageBL = null;
+            context = null;
             messageList = null;
 
             return msg;
@@ -95,11 +106,12 @@ namespace AE_Web
         public static string GetLanguageIDList(string languageName)
         {
             string msg = "";
-
-            LanguageBL languageBL = new LanguageBL();
+            var context = new AngularEntityEntities();
+            var languageBL = new LanguageBL(context);
 
             msg = JsonConvert.SerializeObject(languageBL.STReadLanguageID(languageName, ""));
             languageBL = null;
+            context = null;
 
             return msg;
         }
@@ -109,21 +121,23 @@ namespace AE_Web
         {
             string msg = "";
             List<string> messageList = new List<string>();
-            LanguageBL languageBL = new LanguageBL();
+            var context = new AngularEntityEntities();
+            var languageBL = new LanguageBL(context);
 
             if (languageBL.STDeleteLangauageNameJ())
             {
                 messageList.Add("1");
-                messageList.Add(languageBL.message);
+                messageList.Add(languageBL._message);
             }
             else
             {
                 messageList.Add("2");
-                messageList.Add(languageBL.message);
+                messageList.Add(languageBL._message);
             }
 
             msg = JsonConvert.SerializeObject(messageList);
             languageBL = null;
+            context = null;
             messageList = null;
 
             return msg;
