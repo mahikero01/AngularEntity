@@ -37,8 +37,8 @@ namespace AE_Web
             //Using AngularJS
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/Scripts/angular.min.js",
-                    "~/Scripts Client/angularEntityApp.js",
-                    "~/Scripts Client/LanguageController.js"));
+                    "~/Scripts/Client App/angularEntityApp.js",
+                    "~/Scripts/Client App/Controllers/LanguageController.js"));
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",

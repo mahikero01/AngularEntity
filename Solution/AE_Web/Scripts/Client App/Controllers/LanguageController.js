@@ -4,6 +4,7 @@
         $http
             .post("Language.aspx/FillUpLanguageCombo", { data: {} })
             .success(function (data, status, headers, config) {
+                //debugger;       use for debugging
                 $scope.LanguagePage.Languages = JSON.parse(data.d);
             })
             .error(function (data, status, headers, config) {
