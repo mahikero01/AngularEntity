@@ -5,12 +5,18 @@
             .post("Language.aspx/FillUpLanguageCombo", { data: {} })
             .success(function (data, status, headers, config) {
                 $scope.LanguagePage.Languages = JSON.parse(data.d);
+            })
+            .error(function (data, status, headers, config) {
+                failedXHR(status, "FillUpLanguageCombo");
             });
 
         $http
             .post("Language.aspx/FillUpCompleteLanguageCombo", { data: {} })
             .success(function (data, status, headers, config) {
                 $scope.LanguagePage.LanguageObjects = JSON.parse(data.d);
+            })
+            .error(function (data, status, headers, config) {
+                failedXHR(status, "FillUpCompleteLanguageCombo");
             });
 
         $scope.create = function () {
@@ -36,6 +42,9 @@
                         $scope.Create = null;
                         $scope.messageList = null;
                     }
+                })
+                .error(function (data, status, headers, config) {                 
+                    failedXHR(status, "NewLanguageEntry");
                 });
         };
 
@@ -59,6 +68,9 @@
                         alert($scope.messageList[1]);
                         $scope.messageList = null;
                     }
+                })
+                .error(function (data, status, headers, config) {
+                    failedXHR(status, "ModifyExistingLanguage");
                 });
         };
 
@@ -72,25 +84,31 @@
                 })
                 .success(function (data, status, headers, config) {
                     $scope.LanguagePage.LanguageIDs = JSON.parse(data.d);
+                })
+                .error(function (data, status, headers, config) {
+                    failedXHR(status, "GetLanguageIDList");
                 });
         };
 
         $scope.deleteLanguage = function () {
             $http
-            .post("Language.aspx/RemoveLanguageNameStartWithJ", { data: {} })
-            .success(function (data, status, headers, config) {
-                $scope.messageList = JSON.parse(data.d);
+                .post("Language.aspx/RemoveLanguageNameStartWithJ", { data: {} })
+                .success(function (data, status, headers, config) {
+                    $scope.messageList = JSON.parse(data.d);
 
-                if (angular.equals($scope.messageList[0], "1")) {
-                    alert($scope.messageList[1]);
-                    updateComboBox();
-                    $scope.messageList = null;
-                }
-                else {
-                    alert($scope.messageList[1]);
-                    $scope.messageList = null;
-                }
-            });
+                    if (angular.equals($scope.messageList[0], "1")) {
+                        alert($scope.messageList[1]);
+                        updateComboBox();
+                        $scope.messageList = null;
+                    }
+                    else {
+                        alert($scope.messageList[1]);
+                        $scope.messageList = null;
+                    }
+                })
+                .error(function (data, status, headers, config) {
+                    failedXHR(status, "RemoveLanguageNameStartWithJ");
+                });
         };
 
         var updateComboBox = function () {
@@ -98,13 +116,29 @@
                 .post("Language.aspx/FillUpLanguageCombo", { data: {} })
                 .success(function (data, status, headers, config) {
                     $scope.LanguagePage.Languages = JSON.parse(data.d);
+                })
+                .error(function (data, status, headers, config) {
+                    failedXHR(status, "FillUpLanguageCombo");
                 });
 
             $http
                 .post("Language.aspx/FillUpCompleteLanguageCombo", { data: {} })
                 .success(function (data, status, headers, config) {
                     $scope.LanguagePage.LanguageObjects = JSON.parse(data.d);
+                })
+                .error(function (data, status, headers, config) {
+                    failedXHR(status, "FillUpCompleteLanguageCombo");
                 });
+        };
+
+        var failedXHR = function (returnStatus, serviceName) {
+            if (angular.equals(returnStatus, 500)) {
+                alert("500 Internal Server Error - 'Language.aspx/" + serviceName + "' service is not available")
+            } else if (angular.equals(returnStatus, 404)) {
+                alert("404 Not Found - 'Language.aspx' page is not available");
+            } else {
+                alert(returnStatus);
+            }
         };
     };
 
