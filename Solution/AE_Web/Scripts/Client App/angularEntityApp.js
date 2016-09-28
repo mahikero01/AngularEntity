@@ -1,5 +1,7 @@
 ﻿(function () {
     var app = angular.module("angularEntityApp", []);
 
-    app.constant("languageUrl", "Language.aspx/");
+    //use the below keyword for tracing angular apps
+    //debugger;
+    app.constant("languagePageUrl", "Language.aspx/");
 }());

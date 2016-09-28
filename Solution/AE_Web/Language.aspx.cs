@@ -19,14 +19,14 @@ namespace AE_Web
 
 
         [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
-        public static string NewLanguageEntry(AE_Languages language)
+        public static string NewLanguageEntry(AE_Languages dataReceive)
         {
             string msg = "";
             List<string> messageList = new List<string>();
             var context = new AngularEntityEntities();
             var languageBL = new LanguageBL(context);
 
-            if (languageBL.CreateLanguage(language.LanguageName, language.LanguageDescr))
+            if (languageBL.CreateLanguage(dataReceive.LanguageName, dataReceive.LanguageDescr))
             {
                 messageList.Add("1");
                 messageList.Add(languageBL._message);
@@ -76,14 +76,14 @@ namespace AE_Web
         
 
         [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
-        public static string ModifyExistingLanguage(AE_Languages language)
+        public static string ModifyExistingLanguage(AE_Languages dataReceive)
         {
             string msg = "";
             List<string> messageList = new List<string>();
             var context = new AngularEntityEntities();
             var languageBL = new LanguageBL(context);
 
-            if (languageBL.UpdateLanguage(language))
+            if (languageBL.UpdateLanguage(dataReceive))
             {
                 messageList.Add("1");
                 messageList.Add(languageBL._message);
@@ -103,13 +103,13 @@ namespace AE_Web
         }
 
         [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
-        public static string GetLanguageIDList(string languageName)
+        public static string GetLanguageIDList(string dataReceive)
         {
             string msg = "";
             var context = new AngularEntityEntities();
             var languageBL = new LanguageBL(context);
 
-            msg = JsonConvert.SerializeObject(languageBL.STReadLanguageID(languageName, ""));
+            msg = JsonConvert.SerializeObject(languageBL.STReadLanguageID(dataReceive, ""));
             languageBL = null;
             context = null;
 
