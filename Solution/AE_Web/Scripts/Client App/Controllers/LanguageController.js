@@ -1,25 +1,26 @@
 ﻿(function (app) {
-    var LanguageController = function ($scope, languageService) {
+    var LanguageController = function ($scope, appService, languagePageUrl) {
         $scope.LanguagePage = {};
+        $scope.LanguagePage.ArrayCount = ["1","2"]
         
-        languageService.getData("FillUpLanguageCombo")
+        appService.getData(languagePageUrl, "FillUpLanguageCombo")
             .success(function (data, status, headers, config) {
                 $scope.LanguagePage.Languages = JSON.parse(data.d);
             })
             .error(function (data, status, headers, config) {
-                languageService.failedXHR(status, "FillUpLanguageCombo");
+                appService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
             });
 
-        languageService.getData("FillUpCompleteLanguageCombo")
+        appService.getData(languagePageUrl, "FillUpCompleteLanguageCombo")
             .success(function (data, status, headers, config) {
                 $scope.LanguagePage.LanguageObjects = JSON.parse(data.d);
             })
             .error(function (data, status, headers, config) {
-                languageService.failedXHR(status, "FillUpCompleteLanguageCombo");
+                appService.failedXHR(status, languagePageUrl, "FillUpCompleteLanguageCombo");
             });
 
         $scope.create = function () {
-            languageService.sendGetData("NewLanguageEntry", $scope.Create)
+            appService.sendGetData(languagePageUrl, "NewLanguageEntry", $scope.Create, "dataReceive")
                 .success(function (data, status, headers, config) {
                     $scope.messageList = JSON.parse(data.d);
                     
@@ -37,12 +38,12 @@
                     }
                 })
                 .error(function (data, status, headers, config) {                 
-                    languageService.failedXHR(status, "NewLanguageEntry");
+                    appService.failedXHR(status, languagePageUrl, "NewLanguageEntry");
                 });
         };
 
         $scope.update = function () {
-            languageService.sendGetData("ModifyExistingLanguage", $scope.Show.LanguageObject)
+            appService.sendGetData(languagePageUrl, "ModifyExistingLanguage", $scope.Show.LanguageObject, "dataReceive")
                 .success(function (data, status, headers, config) {
                     $scope.messageList = JSON.parse(data.d);
 
@@ -57,22 +58,22 @@
                     }
                 })
                 .error(function (data, status, headers, config) {
-                    languageService.failedXHR(status, "ModifyExistingLanguage");
+                    appService.failedXHR(status, languagePageUrl, "ModifyExistingLanguage");
                 });
         };
 
         $scope.findID = function () {
-            languageService.sendGetData("GetLanguageIDList", $scope.Find.LanguageName)
+            appService.sendGetData(languagePageUrl, "GetLanguageIDList", $scope.Find.LanguageName, "dataReceive")
                 .success(function (data, status, headers, config) {
                     $scope.LanguagePage.LanguageIDs = JSON.parse(data.d);
                 })
                 .error(function (data, status, headers, config) {
-                    languageService.failedXHR(status, "GetLanguageIDList");
+                    appService.failedXHR(status, languagePageUrl, "GetLanguageIDList");
                 });
         };
 
         $scope.deleteLanguage = function () {
-            languageService.getData("RemoveLanguageNameStartWithJ")
+            appService.getData(languagePageUrl, "RemoveLanguageNameStartWithJ")
                 .success(function (data, status, headers, config) {
                     $scope.messageList = JSON.parse(data.d);
 
@@ -87,30 +88,30 @@
                     }
                 })
                 .error(function (data, status, headers, config) {
-                    languageService.failedXHR(status, "RemoveLanguageNameStartWithJ");
+                    appService.failedXHR(status, languagePageUrl, "RemoveLanguageNameStartWithJ");
                 });
         };
 
         var updateComboBox = function () {
-            languageService.getData("FillUpLanguageCombo")
+            appService.getData(languagePageUrl, "FillUpLanguageCombo")
                 .success(function (data, status, headers, config) {
                     $scope.LanguagePage.Languages = JSON.parse(data.d);
                 })
                 .error(function (data, status, headers, config) {
-                    languageService.failedXHR(status, "FillUpLanguageCombo");
+                    appService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
                 });
 
-            languageService.getData("FillUpCompleteLanguageCombo")
+            appService.getData(languagePageUrl, "FillUpCompleteLanguageCombo")
                 .success(function (data, status, headers, config) {
                     $scope.LanguagePage.LanguageObjects = JSON.parse(data.d);
                 })
                 .error(function (data, status, headers, config) {
-                    languageService.failedXHR(status, "FillUpCompleteLanguageCombo");
+                    appService.failedXHR(status, languagePageUrl, "FillUpCompleteLanguageCombo");
                 });
         };
     };
 
-    LanguageController.$inject = ["$scope", "languageService"];
+    LanguageController.$inject = ["$scope", "appService", "languagePageUrl"];
 
     app.controller("LanguageController", LanguageController);
 }(angular.module("angularEntityApp")));

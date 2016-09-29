@@ -134,9 +134,14 @@
             </button>
         </div>
 
-    </div>
     
+    
+    <div hello-world></div>
 
 
-   
+    <br />
+
+    <div ng-repeat = "n in LanguagePage.ArrayCount" >
+        <div check-out></div>
+    </div>
 </asp:Content>

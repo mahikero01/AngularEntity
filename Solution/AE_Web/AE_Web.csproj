@@ -135,7 +135,9 @@
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\Client App\Services\languageService.js" />
+    <Content Include="Scripts\Client App\Directives\LanguageDirective.js" />
+    <Content Include="Scripts\Client App\Directives\Templates\TestTemplate.html" />
+    <Content Include="Scripts\Client App\Services\appService.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
