@@ -3,6 +3,19 @@
         $scope.LanguagePage = {};
         $scope.LanguagePage.ArrayCount = ["1","2"]
         
+        $scope.roommates = [ 'Ari', 'Q', 'Sean', 'Anand'];
+
+        setTimeout(function () {
+            $scope.roommates.push('Ginger');
+            $scope.$apply();
+            
+            setTimeout(function() {
+                 $scope.roommates.shift();
+                 $scope.$apply(); // Trigger digest
+                 }, 2000);
+        }, 2000);
+
+
         appService.getData(languagePageUrl, "FillUpLanguageCombo")
             .success(function (data, status, headers, config) {
                 $scope.LanguagePage.Languages = JSON.parse(data.d);

@@ -29,3 +29,22 @@ textarea {
         padding: 0;
     }
 }
+
+.fade-inr.ng-enter,
+ .fade-inr.ng-leave {
+ transition: 4s linear;
+ -webkit-transition: 4s linear;
+ }
+ .fade-inr.ng-enter {
+ opacity: 0;
+ color: green;
+ }
+ .fade-inr.ng-enter.ng-enter-active {
+ opacity: 1;
+ color: red;
+ }
+ .fade-inr.ng-leave {}
+ .fade-inr.ng-leave.ng-leave-active {
+ opacity: 0;
+ color: blue;
+ }

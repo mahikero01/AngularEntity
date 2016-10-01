@@ -2,7 +2,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
+    
     <div ng-controller="LanguageController">
+
+        <ul>
+     <li class="fade-inr" ng-repeat="r in roommates"><h1> {{ r }}</h1></li>
+            </ul>
+
         
         <div class="row">
             <div class="form-group">
@@ -144,4 +150,6 @@
     <div ng-repeat = "n in LanguagePage.ArrayCount" >
         <div check-out></div>
     </div>
+
+        </div>
 </asp:Content>

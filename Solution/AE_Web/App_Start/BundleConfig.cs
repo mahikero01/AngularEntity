@@ -37,6 +37,7 @@ namespace AE_Web
             //Using AngularJS
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/Scripts/angular.min.js",
+                    "~/Scripts/angular-animate.min.js",
                     "~/Scripts/Client App/angularEntityApp.js",
                     "~/Scripts/Client App/Services/appService.js",
                     "~/Scripts/Client App/Controllers/LanguageController.js",
