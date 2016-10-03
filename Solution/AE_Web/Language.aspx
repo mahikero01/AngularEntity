@@ -23,7 +23,18 @@
         <div class="animateInclude" ng-include="template.url">
 
         </div>
- </div>
+    </div>
+         <br /> <br />
+
+        <i id="loadNow" class="" style="font-size:24px"></i>
+
+        <br />
+
+        <button ng-click="loading()">
+            loading
+
+        </button>
+
         <br /> <br />
         <div class="row">
             <div class="form-group">

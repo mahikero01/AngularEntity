@@ -34,6 +34,13 @@ namespace AE_Web
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                             "~/Scripts/modernizr-*"));
 
+            //Using style
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                "~/Content/bootstrap.min.css",
+                "~/Content/bootstrap-theme.min.css",
+                "~/Content/font-awesome.min.css",
+                "~/Content/Site.css"));
+
             //Using AngularJS
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/Scripts/angular.min.js",

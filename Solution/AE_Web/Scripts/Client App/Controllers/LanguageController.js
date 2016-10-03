@@ -16,6 +16,31 @@
         }, 2000);
 
 
+        $scope.loading = function () {
+            var loadElem = angular.element(document.querySelector("#loadNow"));
+            loadElem.addClass("fa fa-refresh fa-spin");
+            loadElem.css({
+                opacity: 0
+            });
+            $(loadElem).animate({
+                opacity: 1
+            }, 1000);
+            
+            setTimeout(function () {
+                loadElem.css({
+                    opacity: 1
+                });
+                $(loadElem).animate({
+                    opacity: 0
+                }, 1000);
+                setTimeout(function () {
+                    loadElem.removeClass("fa fa-refresh fa-spin");
+                }, 1000);
+            }, 3000);
+            
+            //loadElem.
+        };
+
         appService.getData(languagePageUrl, "FillUpLanguageCombo")
             .success(function (data, status, headers, config) {
                 $scope.LanguagePage.Languages = JSON.parse(data.d);
