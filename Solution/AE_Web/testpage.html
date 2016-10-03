@@ -4,17 +4,21 @@
     <title></title>
 	<meta charset="utf-8" />
     <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/Client App/testApp.js"></script>
     
-    <script src="Scripts Client/TestController.js"></script>
 </head>
-<body ng-app="TestApp">
-    <div ng-controller="ParentController">
-        <div ng-controller="ChildController">
-            <a ng-click="sayHello()">Say What</a>
-            {{person}}
-        </div>
-       
+<body ng-app="testApp">
+    <div ng-controller="TestController">
+
     </div>
+    
+    
+    <div my-directive
+          some-attr="{{ myUrl }}"
+          my-link-text="Click me to go to Googlem">
+        
+    </div>
+
 
 </body>
 </html>

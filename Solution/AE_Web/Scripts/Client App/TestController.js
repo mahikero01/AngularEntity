@@ -1,5 +1,5 @@
-﻿(function () {
-    var app = angular.module("TestApp", []);
+﻿(function (app) {
+   
     
 
     app.controller("TestController", function ($scope) {
@@ -15,4 +15,4 @@
              $scope.person.name = "Ari Lerner";
              }
          });
-}());
+}(angular.module("testApp")));

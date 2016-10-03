@@ -49,7 +49,8 @@ namespace AE_Web
                     "~/Scripts/Client App/Services/appService.js",
                     "~/Scripts/Client App/Controllers/LanguageController.js",
                     "~/Scripts/Client App/Directives/languageDirective.js",
-                    "~/Scripts/Client App/animation.js"));
+                    "~/Scripts/Client App/animation.js",
+                    "~/Scripts/Client App/testApp.js"));
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "jquery",
