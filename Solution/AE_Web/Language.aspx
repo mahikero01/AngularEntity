@@ -10,6 +10,21 @@
             </ul>
 
         
+    <div ng-init="template.url='/first.html'">
+        <button ng-click="template.url='/first.html'">
+            Home
+        </button>
+        <button ng-click="template.url='/second.html'">
+            Second
+        </button>
+        <button ng-click="template.url='/third.html'">
+            Third
+        </button>
+        <div class="animateInclude" ng-include="template.url">
+
+        </div>
+ </div>
+        <br /> <br />
         <div class="row">
             <div class="form-group">
                 <label class="control-label col-xs-2" for="ShowLanguageName">Programming Language</label>

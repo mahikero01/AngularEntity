@@ -41,7 +41,8 @@ namespace AE_Web
                     "~/Scripts/Client App/angularEntityApp.js",
                     "~/Scripts/Client App/Services/appService.js",
                     "~/Scripts/Client App/Controllers/LanguageController.js",
-                    "~/Scripts/Client App/Directives/languageDirective.js"));
+                    "~/Scripts/Client App/Directives/languageDirective.js",
+                    "~/Scripts/Client App/animation.js"));
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",

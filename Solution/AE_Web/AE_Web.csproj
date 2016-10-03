@@ -110,10 +110,12 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="first.html" />
     <Content Include="Language.aspx" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\Client App\angularEntityApp.js" />
+    <Content Include="Scripts\Client App\animation.js" />
     <Content Include="Scripts\Client App\Controllers\LanguageController.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -171,8 +173,10 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="second.html" />
     <Content Include="Site.Master" />
     <Content Include="testpage.html" />
+    <Content Include="third.html" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
