@@ -52,6 +52,22 @@ namespace AE_Web
                     "~/Scripts/Client App/animation.js"));
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
+                "jquery",
+                new ScriptResourceDefinition
+                {
+                    Path = "~/Scripts/jquery-1.10.2.min.js",
+                    DebugPath = "~/Scripts/jquery-1.10.2.min.js"
+                });
+
+            ScriptManager.ScriptResourceMapping.AddDefinition(
+                "bootstrap",
+                new ScriptResourceDefinition
+                {
+                    Path = "~/Scripts/bootstrap.min.js",
+                    DebugPath = "~/Scripts/bootstrap.min.js"
+                });
+
+            ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",
                 new ScriptResourceDefinition
                 {
