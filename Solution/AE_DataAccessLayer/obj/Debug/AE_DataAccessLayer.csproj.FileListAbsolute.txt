@@ -27,3 +27,13 @@ P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.S
 P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.csprojResolveAssemblyReference.cache
 P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.dll
 P:\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.pdb
+Z:\REF\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\AE_DataAccessLayer.dll.config
+Z:\REF\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\AE_DataAccessLayer.dll
+Z:\REF\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\AE_DataAccessLayer.pdb
+Z:\REF\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.dll
+Z:\REF\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+Z:\REF\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.xml
+Z:\REF\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+Z:\REF\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.csprojResolveAssemblyReference.cache
+Z:\REF\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.dll
+Z:\REF\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.pdb

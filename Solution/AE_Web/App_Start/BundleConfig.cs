@@ -45,12 +45,12 @@ namespace AE_Web
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/Scripts/angular.min.js",
                     "~/Scripts/angular-animate.min.js",
-                    "~/Scripts/Client App/angularEntityApp.js",
-                    "~/Scripts/Client App/Services/appService.js",
-                    "~/Scripts/Client App/Controllers/LanguageController.js",
-                    "~/Scripts/Client App/Directives/languageDirective.js",
-                    "~/Scripts/Client App/animation.js",
-                    "~/Scripts/Client App/testApp.js"));
+                    "~/Scripts/Client_App/angularEntityApp.js",
+                    "~/Scripts/Client_App/Services/appService.js",
+                    "~/Scripts/Client_App/Controllers/LanguageController.js",
+                    "~/Scripts/Client_App/Directives/languageDirective.js",
+                    "~/Scripts/Client_App/animation.js",
+                    "~/Scripts/Client_App/testApp.js"));
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "jquery",
