@@ -16,7 +16,8 @@
     app.directive("helloWorld", function () {
         return {
             restrict: "A",
-            template: "heloo"
+            
+            template: "This is string template"
         };
     });
 
@@ -24,7 +25,7 @@
         return {
             restrict: "A",
             replace: true,
-            templateUrl: "Scripts/Client App/Directives/Templates/TestTemplate.html"
+            templateUrl: "Page_Templates/TestTemplate.html"
         };
     });
 

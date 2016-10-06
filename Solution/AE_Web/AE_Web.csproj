@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\Client_App\Directives\Templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\font-awesome.css" />
@@ -118,7 +119,7 @@
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\Client_App\angularEntityApp.js" />
-    <Content Include="Scripts\Client_App\animation.js" />
+    <Content Include="Scripts\Client_App\Services\animation.js" />
     <Content Include="Scripts\Client_App\Controllers\LanguageController.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -149,7 +150,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Client_App\Directives\LanguageDirective.js" />
-    <Content Include="Scripts\Client_App\Directives\Templates\TestTemplate.html" />
+    <Content Include="Page_Templates\TestTemplate.html" />
     <Content Include="Scripts\Client_App\Services\appService.js" />
     <Content Include="Scripts\Client_App\testApp.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Language.aspx.cs" Inherits="AE_Web.Language" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    
+    <ng-form name="LanguageForm" id="LanguageForm" />
     
     <div ng-controller="LanguageController">
 
@@ -10,21 +10,7 @@
             </ul>
 
         
-    <div ng-init="template.url='/first.html'">
-        <button ng-click="template.url='/first.html'">
-            Home
-        </button>
-        <button ng-click="template.url='/second.html'">
-            Second
-        </button>
-        <button ng-click="template.url='/third.html'">
-            Third
-        </button>
-        <div class="animateInclude" ng-include="template.url">
-
-        </div>
-    </div>
-         <br /> <br />
+    
 
         <i id="loadNow" class="" style="font-size:24px"></i>
 
@@ -36,6 +22,35 @@
         </button>
 
         <br /> <br />
+
+        <div check-out=""></div>
+
+        <br /> <br />
+
+        <div hello-world=""></div>
+
+        <br /> <br />
+
+        <div ng-repeat = "n in LanguagePage.ArrayCount" >
+            <div check-out></div>
+        </div>
+
+        <br /> <br />
+
+        <div ng-init="template.url='Page_Templates/first.html'">
+            <button ng-click="template.url='Page_Templates/first.html'">
+                Home
+            </button>
+            <button ng-click="template.url='Page_Templates/second.html'">
+                Second
+            </button>
+            <button ng-click="template.url='Page_Templates/third.html'">
+                Third
+            </button>
+            <div class="animateInclude" ng-include="template.url"></div>
+        </div>
+         <br /> <br />
+
         <div class="row">
             <div class="form-group">
                 <label class="control-label col-xs-2" for="ShowLanguageName">Programming Language</label>
@@ -59,7 +74,7 @@
             </div>
         </div>
 
-        Input is: {{AngularEntity.CreateLanguageName.$valid}}
+        Input is: {{LanguageForm.CreateLanguageName.$valid}}
 
         <div class="row">
             <div class="form-group">
@@ -70,12 +85,12 @@
             </div>
         </div>
 
-        Input is: {{AngularEntity.CreateLanguageDescr.$valid}}
+        Input is: {{LanguageForm.CreateLanguageDescr.$valid}}
 
         <div class="row">
             <button type="button" class="btn-responsive btn btn-success col-xs-2" 
-                ng-disabled="!AngularEntity.CreateLanguageName.$valid || !AngularEntity.CreateLanguageDescr.$valid"
-                ng-click="AngularEntity.CreateLanguageName.$valid && AngularEntity.CreateLanguageDescr.$valid && create()">
+                ng-disabled="!LanguageForm.CreateLanguageName.$valid || !LanguageForm.CreateLanguageDescr.$valid"
+                ng-click="LanguageForm.CreateLanguageName.$valid && LanguageForm.CreateLanguageDescr.$valid && create()">
                 <span aria-hidden="true" class="glyphicon glyphicon-ok"></span> New Record
             </button>
         </div>
@@ -108,7 +123,7 @@
             </div>
         </div>
 
-        Input is: {{AngularEntity.EditLanguageName.$valid}}
+        Input is: {{LanguageForm.EditLanguageName.$valid}}
 
         <div class="row">
             <div class="form-group">
@@ -119,12 +134,12 @@
             </div>
         </div>
 
-        Input is: {{AngularEntity.EditLanguageDescr.$valid}}
+        Input is: {{LanguageForm.EditLanguageDescr.$valid}}
 
         <div class="row">
             <button type="button" class="btn-responsive btn btn-success col-xs-2" 
-                ng-disabled="!AngularEntity.EditLanguageName.$valid || !AngularEntity.EditLanguageDescr.$valid"
-                ng-click="AngularEntity.EditLanguageName.$valid && AngularEntity.EditLanguageDescr.$valid && update()">
+                ng-disabled="!LanguageForm.EditLanguageName.$valid || !LanguageForm.EditLanguageDescr.$valid"
+                ng-click="LanguageForm.EditLanguageName.$valid && LanguageForm.EditLanguageDescr.$valid && update()">
                 <span aria-hidden="true" class="glyphicon glyphicon-ok"></span> Update Record
             </button>
         </div>                 
@@ -142,12 +157,12 @@
             </div>
         </div>
 
-        Input is: {{AngularEntity.FindLanguageName.$valid}}
+        Input is: {{LanguageForm.FindLanguageName.$valid}}
 
         <div class="row">
             <button type="button" class="btn-responsive btn btn-success col-xs-2" 
-                ng-disabled="!AngularEntity.FindLanguageName.$valid"
-                ng-click="AngularEntity.FindLanguageName.$valid && findID()">
+                ng-disabled="!LanguageForm.FindLanguageName.$valid"
+                ng-click="LanguageForm.FindLanguageName.$valid && findID()">
                 <span aria-hidden="true" class="glyphicon glyphicon-ok"></span> Find ID
             </button>
         </div>
@@ -165,17 +180,6 @@
                 <span aria-hidden="true" class="glyphicon glyphicon-ok"></span> Delete Language Start with "J"
             </button>
         </div>
-
-    
-    
-    <div hello-world></div>
-
-
-    <br />
-
-    <div ng-repeat = "n in LanguagePage.ArrayCount" >
-        <div check-out></div>
-    </div>
 
         </div>
 </asp:Content>

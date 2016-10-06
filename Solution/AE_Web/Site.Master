@@ -19,7 +19,6 @@
 </head>
 <body ng-app="angularEntityApp">
     <form runat="server" class="form-horizontal" >
-        <ng-form name="AngularEntity" id="AngularEntity" />
         
         <asp:ScriptManager runat="server">
             <Scripts>

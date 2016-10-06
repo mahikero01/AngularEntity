@@ -8,7 +8,6 @@
                 $(element).animate({
                     opacity: 1
                  }, 1000, done);
-                // $(element).fadeIn(slow);
             },
             leave: function(element, done) {
                 done();
