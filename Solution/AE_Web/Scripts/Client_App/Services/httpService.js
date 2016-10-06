@@ -1,5 +1,5 @@
 ﻿(function (app) {
-    var appService = function ($http) {
+    app.factory("httpService", function ($http) { 
         var getData = function (webPage, webService) {
             return $http.post(webPage + webService, { data: {} });
                         
@@ -29,7 +29,5 @@
             sendGetData: sendGetData,
             failedXHR: failedXHR
         };
-    };
-
-    app.factory("appService", appService);
+    }).$inject = ["$http"];
 }(angular.module("angularEntityApp")));

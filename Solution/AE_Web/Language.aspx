@@ -9,21 +9,6 @@
      <li class="fade-inr" ng-repeat="r in roommates"><h1> {{ r }}</h1></li>
             </ul>
 
-        
-    
-
-        <i id="loadNow" class="" style="font-size:24px"></i>
-
-        <br />
-
-        <button ng-click="loading()">
-            loading
-
-        </button>
-
-        <br /> <br />
-
-        <div check-out=""></div>
 
         <br /> <br />
 
@@ -37,18 +22,25 @@
 
         <br /> <br />
 
-        <div ng-init="template.url='Page_Templates/first.html'">
-            <button ng-click="template.url='Page_Templates/first.html'">
+        <div>
+            <button ng-click="showTemplate('Page_Templates/first.html')">
                 Home
             </button>
-            <button ng-click="template.url='Page_Templates/second.html'">
+            <button ng-click="showTemplate('Page_Templates/second.html')">
                 Second
             </button>
-            <button ng-click="template.url='Page_Templates/third.html'">
+            <button ng-click="showTemplate('Page_Templates/third.html')">
                 Third
             </button>
-            <div class="animateInclude" ng-include="template.url"></div>
+            {{LanguagePage.InputTemplate}}
+            <div Class="inputTemplate" ng-include src="LanguagePage.InputTemplate"></div>
         </div>
+        
+        <i id="loadNow" class="" style="font-size:24px"></i>
+
+        <br />
+
+        <button ng-click="processSomething()">loading</button>
          <br /> <br />
 
         <div class="row">

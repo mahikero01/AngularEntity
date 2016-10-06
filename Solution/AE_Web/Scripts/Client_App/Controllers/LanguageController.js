@@ -1,8 +1,9 @@
 ﻿(function (app) {
-    app.controller("LanguageController", function ($scope, $timeout, appService, languagePageUrl) {
+    app.controller("LanguageController", function ($scope, $timeout, httpService, fxService, languagePageUrl) {
         $scope.LanguagePage = {};
         $scope.LanguagePage.ArrayCount = ["1", "2"]
         $scope.roommates = ['Ari', 'Q', 'Sean', 'Anand'];
+        $scope.LanguagePage.InputTemplate = 'Page_Templates/first.html';
 
         //animation using CSS transition see also transition configuration in "content/Site.css"
         $timeout(function () {
@@ -14,50 +15,34 @@
                 $scope.$apply(); // Trigger digest
             }, 2000);
         }, 2000);
+        //debugger;
 
-        $scope.loading = function () {
-            var loadElem = angular.element(document.querySelector("#loadNow"));
-            loadElem.addClass("fa fa-refresh fa-spin");
-            loadElem.css({
-                opacity: 0
-            });
-            $(loadElem).animate({
-                opacity: 1
-            }, 1000);
-
-            setTimeout(function () {
-                loadElem.css({
-                    opacity: 1
-                });
-                $(loadElem).animate({
-                    opacity: 0
-                }, 1000);
-                setTimeout(function () {
-                    loadElem.removeClass("fa fa-refresh fa-spin");
-                }, 1000);
-            }, 3000);
-
-            //loadElem.
+        $scope.showTemplate = function (requestTemplate) {
+            $scope.LanguagePage.InputTemplate = requestTemplate;
         };
 
-        appService.getData(languagePageUrl, "FillUpLanguageCombo")
+        $scope.processSomething = function () {
+            fxService.loadingIcon("#loadNow");
+        };
+
+        httpService.getData(languagePageUrl, "FillUpLanguageCombo")
             .success(function (data, status, headers, config) {
                 $scope.LanguagePage.Languages = JSON.parse(data.d);
             })
             .error(function (data, status, headers, config) {
-                appService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
+                httpService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
             });
 
-        appService.getData(languagePageUrl, "FillUpCompleteLanguageCombo")
+        httpService.getData(languagePageUrl, "FillUpCompleteLanguageCombo")
             .success(function (data, status, headers, config) {
                 $scope.LanguagePage.LanguageObjects = JSON.parse(data.d);
             })
             .error(function (data, status, headers, config) {
-                appService.failedXHR(status, languagePageUrl, "FillUpCompleteLanguageCombo");
+                httpService.failedXHR(status, languagePageUrl, "FillUpCompleteLanguageCombo");
             });
 
         $scope.create = function () {
-            appService.sendGetData(languagePageUrl, "NewLanguageEntry", $scope.Create, "dataReceive")
+            httpService.sendGetData(languagePageUrl, "NewLanguageEntry", $scope.Create, "dataReceive")
                 .success(function (data, status, headers, config) {
                     $scope.messageList = JSON.parse(data.d);
 
@@ -75,12 +60,12 @@
                     }
                 })
                 .error(function (data, status, headers, config) {
-                    appService.failedXHR(status, languagePageUrl, "NewLanguageEntry");
+                    httpService.failedXHR(status, languagePageUrl, "NewLanguageEntry");
                 });
         };
 
         $scope.update = function () {
-            appService.sendGetData(languagePageUrl, "ModifyExistingLanguage", $scope.Show.LanguageObject, "dataReceive")
+            httpService.sendGetData(languagePageUrl, "ModifyExistingLanguage", $scope.Show.LanguageObject, "dataReceive")
                 .success(function (data, status, headers, config) {
                     $scope.messageList = JSON.parse(data.d);
 
@@ -95,22 +80,22 @@
                     }
                 })
                 .error(function (data, status, headers, config) {
-                    appService.failedXHR(status, languagePageUrl, "ModifyExistingLanguage");
+                    httpService.failedXHR(status, languagePageUrl, "ModifyExistingLanguage");
                 });
         };
 
         $scope.findID = function () {
-            appService.sendGetData(languagePageUrl, "GetLanguageIDList", $scope.Find.LanguageName, "dataReceive")
+            httpService.sendGetData(languagePageUrl, "GetLanguageIDList", $scope.Find.LanguageName, "dataReceive")
                 .success(function (data, status, headers, config) {
                     $scope.LanguagePage.LanguageIDs = JSON.parse(data.d);
                 })
                 .error(function (data, status, headers, config) {
-                    appService.failedXHR(status, languagePageUrl, "GetLanguageIDList");
+                    httpService.failedXHR(status, languagePageUrl, "GetLanguageIDList");
                 });
         };
 
         $scope.deleteLanguage = function () {
-            appService.getData(languagePageUrl, "RemoveLanguageNameStartWithJ")
+            httpService.getData(languagePageUrl, "RemoveLanguageNameStartWithJ")
                 .success(function (data, status, headers, config) {
                     $scope.messageList = JSON.parse(data.d);
 
@@ -125,27 +110,27 @@
                     }
                 })
                 .error(function (data, status, headers, config) {
-                    appService.failedXHR(status, languagePageUrl, "RemoveLanguageNameStartWithJ");
+                    httpService.failedXHR(status, languagePageUrl, "RemoveLanguageNameStartWithJ");
                 });
         };
 
         var updateComboBox = function () {
-            appService.getData(languagePageUrl, "FillUpLanguageCombo")
+            httpService.getData(languagePageUrl, "FillUpLanguageCombo")
                 .success(function (data, status, headers, config) {
                     $scope.LanguagePage.Languages = JSON.parse(data.d);
                 })
                 .error(function (data, status, headers, config) {
-                    appService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
+                    httpService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
                 });
 
-            appService.getData(languagePageUrl, "FillUpCompleteLanguageCombo")
+            httpService.getData(languagePageUrl, "FillUpCompleteLanguageCombo")
                 .success(function (data, status, headers, config) {
                     $scope.LanguagePage.LanguageObjects = JSON.parse(data.d);
                 })
                 .error(function (data, status, headers, config) {
-                    appService.failedXHR(status, languagePageUrl, "FillUpCompleteLanguageCombo");
+                    httpService.failedXHR(status, languagePageUrl, "FillUpCompleteLanguageCombo");
                 });
         };
 
-    }).$inject = ["$scope", "$timeout", "appService", "languagePageUrl"];
+    }).$inject = ["$scope", "$timeout", "httpService", "fxService", "languagePageUrl"];
 }(angular.module("angularEntityApp")));

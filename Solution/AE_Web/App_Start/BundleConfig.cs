@@ -46,8 +46,8 @@ namespace AE_Web
                     "~/Scripts/angular.min.js",
                     "~/Scripts/angular-animate.min.js",
                     "~/Scripts/Client_App/angularEntityApp.js",
-                    "~/Scripts/Client_App/Services/appService.js",
-                    "~/Scripts/Client_App/Services/animation.js",
+                    "~/Scripts/Client_App/Services/httpService.js",
+                    "~/Scripts/Client_App/Services/fxService.js",
                     "~/Scripts/Client_App/Controllers/LanguageController.js",
                     "~/Scripts/Client_App/Directives/languageDirective.js",
                     "~/Scripts/Client_App/testApp.js"));

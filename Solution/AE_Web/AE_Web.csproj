@@ -116,10 +116,11 @@
     <Content Include="Page_Templates\first.html" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Language.aspx" />
+    <Content Include="Page_Templates\TestTemplate.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\Client_App\angularEntityApp.js" />
-    <Content Include="Scripts\Client_App\Services\animation.js" />
+    <Content Include="Scripts\Client_App\Services\fxService.js" />
     <Content Include="Scripts\Client_App\Controllers\LanguageController.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -135,7 +136,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Scripts\Client_App\TestController.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
@@ -150,9 +150,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Client_App\Directives\LanguageDirective.js" />
-    <Content Include="Page_Templates\TestTemplate.html" />
-    <Content Include="Scripts\Client_App\Services\appService.js" />
-    <Content Include="Scripts\Client_App\testApp.js" />
+    <Content Include="Scripts\Client_App\Services\httpService.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
