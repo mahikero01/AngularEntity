@@ -1,15 +1,14 @@
 ﻿(function (app) {
-    var LanguageController = function ($scope, appService, languagePageUrl) {
+    var LanguageController = function ($scope, $timeout, appService, languagePageUrl) {
         $scope.LanguagePage = {};
-        $scope.LanguagePage.ArrayCount = ["1","2"]
-        
+        $scope.LanguagePage.ArrayCount = ["1","2"]        
         $scope.roommates = [ 'Ari', 'Q', 'Sean', 'Anand'];
 
-        setTimeout(function () {
+        $timeout(function () {
             $scope.roommates.push('Ginger');
             $scope.$apply();
             
-            setTimeout(function() {
+            $timeout(function () {
                  $scope.roommates.shift();
                  $scope.$apply(); // Trigger digest
                  }, 2000);
@@ -149,7 +148,7 @@
         };
     };
 
-    LanguageController.$inject = ["$scope", "appService", "languagePageUrl"];
+    LanguageController.$inject = ["$scope", "$timeout", "appService", "languagePageUrl"];
 
     app.controller("LanguageController", LanguageController);
 }(angular.module("angularEntityApp")));
