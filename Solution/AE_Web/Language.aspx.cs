@@ -8,13 +8,30 @@ namespace AE_Web
 {
     public partial class Language : System.Web.UI.Page
     {
+        private static string userName;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["fname"] != null)
+            string currentUser = Request.ServerVariables["LOGON_USER"].ToString();
+            currentUser = currentUser.Remove(0, currentUser.IndexOf('\\') + 1);
+            Session["currentUserName"] = currentUser;
 
-            {
-                var rico = Request.QueryString["fname"];
-            }
+            Language.userName = currentUser;
+            //if (Request.QueryString["fname"] != null)
+
+            //{
+            //    var rico = Request.QueryString["fname"];
+            //}
+        }
+
+        [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
+        public static string GetSession()
+        {
+            string msg = "";
+
+            msg = JsonConvert.SerializeObject(Language.userName);
+
+            return msg;
         }
 
 

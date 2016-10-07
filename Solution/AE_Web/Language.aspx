@@ -9,9 +9,30 @@
      <li class="fade-inr" ng-repeat="r in roommates"><h1> {{ r }}</h1></li>
             </ul>
 
+        <br />
+
+        Session Is: <%= Session["currentUserName"] %>
+
+        <br />
+
+        <a href="<%= Session["name"] %>"> link </a>
+        <br />
+
+        Session 2  (using angularjs): {{LanguagePage.sessionName}}
+
+        <br />
+
+        {{LanguagePage.Test }}
 
         <br /> <br />
 
+        asp syntax
+        {{LanguagePage.Rico="server"}}
+        <br />
+
+        <asp:LoginName runat="server" />
+
+        <br />
         <div hello-world=""></div>
 
         <br /> <br />

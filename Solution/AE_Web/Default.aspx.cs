@@ -17,6 +17,9 @@ namespace AE_Web
             //var test = new LanguageBL();
             //test.STReadLanguageID("P","");
             //test.STDeleteLangauageNameJ();
+            string currentUser = Request.ServerVariables["LOGON_USER"].ToString();
+            currentUser = currentUser.Remove(0, currentUser.IndexOf('\\') + 1);
+            Session["currentUserName"] = currentUser;
         }
 
         

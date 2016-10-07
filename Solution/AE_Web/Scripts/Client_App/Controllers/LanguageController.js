@@ -16,6 +16,11 @@
             }, 2000);
         }, 2000);
         //debugger;
+        sessionStorage.setItem('name', JSON.stringify("rico"));
+
+        $scope.LanguagePage.Test = JSON.parse(sessionStorage.getItem('name'))
+
+        //$sessionStorage.userName = "Khan.";
 
         $scope.showTemplate = function (requestTemplate) {
             $scope.LanguagePage.InputTemplate = requestTemplate;
@@ -24,6 +29,14 @@
         $scope.processSomething = function () {
             fxService.loadingIcon("#loadNow");
         };
+
+        httpService.getData(languagePageUrl, "GetSession")
+            .success(function (data, status, headers, config) {
+                $scope.LanguagePage.sessionName = JSON.parse(data.d);
+            })
+            .error(function (data, status, headers, config) {
+                httpService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
+            });
 
         httpService.getData(languagePageUrl, "FillUpLanguageCombo")
             .success(function (data, status, headers, config) {
