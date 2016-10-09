@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AE_Web", "AE_Web\AE_Web.csproj", "{9504163C-C011-4E3F-8E69-4B589034C812}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AE_BusinessLayer", "AE_BusinessLayer\AE_BusinessLayer.csproj", "{6AFD87E9-A62B-465F-843A-3C33CF9540D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AE_DataAccessLayer", "AE_DataAccessLayer\AE_DataAccessLayer.csproj", "{A62355B9-03F8-47CA-A313-87356C822392}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AE_WebComponent", "AE_WebComponent\AE_WebComponent.csproj", "{92471067-99C6-4682-942F-D6CF32EA531C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A62355B9-03F8-47CA-A313-87356C822392}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A62355B9-03F8-47CA-A313-87356C822392}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A62355B9-03F8-47CA-A313-87356C822392}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92471067-99C6-4682-942F-D6CF32EA531C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92471067-99C6-4682-942F-D6CF32EA531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92471067-99C6-4682-942F-D6CF32EA531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92471067-99C6-4682-942F-D6CF32EA531C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
