@@ -1,8 +1,5 @@
-﻿(function (angular) {
-    'use strict';
-
-    angular.module('angularEntityApp')
-    .factory("httpService", function ($http) {
+﻿(function (app) {
+    app.factory("httpService", function ($http) {
         var getData = function (webPage, webService) {
             return $http.post(webPage + webService, { data: {} });
 
@@ -34,4 +31,4 @@
         };
     });
     ///.$inject = ['$http'];
-})(window.angular);
+}(angular.module('angularEntityApp')));

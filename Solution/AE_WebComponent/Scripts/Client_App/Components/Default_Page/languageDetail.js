@@ -1,16 +1,14 @@
-﻿(function (angular) {
-    'use strict';
-    function LanguageDetailController() {
-       // var ctrl = this;
-        //ctrl.person.Name = "ceci";
-    }
-
-    //angular.module('angularEntityApp').component('languageDetail', {
-    //    templateUrl: 'Page_Templates/Default_Page/languageDetail.html',
-    //    controller: LanguageDetailController
-    //    //bindings: {
-    //    //    language: '='
-    //    //    //person: '='
-    //    //}
-    //})
-})(window.angular);
+﻿(function (app) {
+    app.component('languageDetail', {
+        templateUrl: 'Page_Templates/Default_Page/languageDetail.html',
+        controller: function LanguageDetailController() {
+            this.changValue = function () {
+                this.lang.name = 'c++';
+            };
+        },
+        controllerAs: 'LanguageDetailCtrl',
+        bindings: {
+            lang: '<'
+        }
+    });
+}(angular.module('angularEntityApp')));

@@ -1,12 +1,4 @@
-﻿(function (angular) {
-    'use strict';
+﻿(function () {
     //debugger;
-    angular
-    .module('angularEntityApp', [])
-    .controller('MainCtrl', function MainCtrl() {
-        this.language = {
-            name: 'Java'
-        };
-    })
-    //.constant('DefaultPageUrl', 'Default.aspx/');
-})(window.angular);
+    var app = angular.module('angularEntityApp', []);
+}());

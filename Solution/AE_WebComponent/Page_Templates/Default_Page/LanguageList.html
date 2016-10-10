@@ -1,3 +1,7 @@
 ﻿<h1>Languages</h1>
 <br />
-{{$ctrl.language.name}}
+Parent Name: {{LanguageListCtrl.language.name}}
+<a href="" ng-click="LanguageListCtrl.clickMe();">parent</a>
+
+<hr />
+<language-detail lang="LanguageListCtrl.language"></language-detail>
