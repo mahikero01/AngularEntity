@@ -126,7 +126,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Page_Templates\Default_Page\LanguageList.html" />
+    <Content Include="Page_Templates\Default_Page\languageDetail.html" />
+    <Content Include="Page_Templates\Default_Page\languageList.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
@@ -135,7 +136,8 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Client_App\angularEntityApp.js" />
-    <Content Include="Scripts\Client_App\Components\Default_Page\LanguageList.js" />
+    <Content Include="Scripts\Client_App\Components\Default_Page\languageDetail.js" />
+    <Content Include="Scripts\Client_App\Components\Default_Page\languageList.js" />
     <Content Include="Scripts\Client_App\Services\httpService.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
