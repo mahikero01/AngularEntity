@@ -1,4 +1,4 @@
 ﻿(function () {
     //debugger;
-    var app = angular.module('angularEntityApp', []);
+    var app = angular.module('angularEntityApp', ['ngAnimate']);
 }());
