@@ -126,6 +126,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="heroDetail.html" />
+    <Content Include="heroDetail.js" />
+    <Content Include="index.html" />
+    <Content Include="index.js" />
     <Content Include="Page_Templates\Default_Page\languageDetail.html" />
     <Content Include="Page_Templates\Default_Page\languageList.html" />
     <Content Include="Scripts\angular-mocks.js" />
