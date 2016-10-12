@@ -41,3 +41,14 @@ Z:\REF\SandBox\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\EntityFramework
 Z:\REF\SandBox\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.csprojResolveAssemblyReference.cache
 Z:\REF\SandBox\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.dll
 Z:\REF\SandBox\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.pdb
+C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\AE_BusinessLayer.dll
+C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\AE_BusinessLayer.pdb
+C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\AE_DataAccessLayer.dll
+C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\AE_DataAccessLayer.pdb
+C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.dll
+C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.pdb

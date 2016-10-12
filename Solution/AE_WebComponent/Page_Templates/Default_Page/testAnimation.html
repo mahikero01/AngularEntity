@@ -1,0 +1,22 @@
+﻿<div>
+    <a ng-click="testAnimationCtrl.getInputPage();" href="">
+        Click Me For Template input
+    </a>
+    
+    
+    <div class="animateFadeIn" ng-include src="testAnimationCtrl.inputPage"></div>
+
+    <br />
+
+    <h6>List Demo</h6>
+
+    <a ng-click="testAnimationCtrl.showList();" href="">
+        Click Me For List output
+    </a>
+
+    <div class="animateFadeIn" ng-repeat="language in testAnimationCtrl.progLanguages"><h1>{{ language }}</h1></div>
+
+    
+
+   
+</div>

@@ -132,6 +132,8 @@
     <Content Include="index.js" />
     <Content Include="Page_Templates\Default_Page\languageDetail.html" />
     <Content Include="Page_Templates\Default_Page\languageList.html" />
+    <Content Include="Page_Templates\Default_Page\testAnimation.html" />
+    <Content Include="Page_Templates\Default_Page\third.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -145,6 +147,7 @@
     <Content Include="Scripts\Client_App\angularEntityApp.js" />
     <Content Include="Scripts\Client_App\Components\Default_Page\languageDetail.js" />
     <Content Include="Scripts\Client_App\Components\Default_Page\languageList.js" />
+    <Content Include="Scripts\Client_App\Components\Default_Page\testAnimation.js" />
     <Content Include="Scripts\Client_App\Services\httpService.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

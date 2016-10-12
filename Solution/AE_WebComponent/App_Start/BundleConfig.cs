@@ -41,7 +41,8 @@ namespace AE_WebComponent
                     "~/Scripts/Client_App/angularEntityApp.js",
                     "~/Scripts/Client_App/Services/httpService.js",
                     "~/Scripts/Client_App/Components/Default_Page/languageList.js",
-                    "~/Scripts/Client_App/Components/Default_Page/languageDetail.js"));
+                    "~/Scripts/Client_App/Components/Default_Page/languageDetail.js",
+                    "~/Scripts/Client_App/Components/Default_Page/testAnimation.js"));
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",
