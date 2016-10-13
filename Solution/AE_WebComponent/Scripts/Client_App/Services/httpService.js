@@ -29,6 +29,5 @@
             sendGetData: sendGetData,
             failedXHR: failedXHR
         };
-    });
-    ///.$inject = ['$http'];
+    }).$inject = ['$http'];
 }(angular.module('angularEntityApp')));

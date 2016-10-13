@@ -14,9 +14,55 @@
         Click Me For List output
     </a>
 
-    <div class="animateFadeIn" ng-repeat="language in testAnimationCtrl.progLanguages"><h1>{{ language }}</h1></div>
+    <div class="animateStagFadeIn" ng-repeat="language in testAnimationCtrl.progLanguages"><h1>{{ language }}</h1></div>
 
+    <br /><br />
+    Switching templates
+    <br />
+    <a ng-click="testAnimationCtrl.getPage1();" href="">
+        second template
+    </a>
+    <br />
+    <a ng-click="testAnimationCtrl.getPage2();" href="">
+        third template
+    </a>
+    <br />
+
+    <div ng-switch on="testAnimationCtrl.currentSelection">
+        <div ng-switch-when="1">
+            <div class="animateFadeIn" ng-include src="'Page_Templates/Default_Page/second.html'"></div>
+        </div>
+        <div ng-switch-when="2">
+            <div class="animateFadeIn" ng-include src="'Page_Templates/Default_Page/third.html'"></div>
+        </div>
+    </div>
+
+    <br />
+
+    <br />
+
+    Toogle screen
+    <br />
+    <a ng-click="testAnimationCtrl.toggleSwitch();" href="">
+        toggle screen
+    </a>
     
-
+    <div class="animateFadeInToggle" ng-hide="testAnimationCtrl.toggleSwitchStatus">
+        <div ng-include src="'Page_Templates/Default_Page/third.html'"></div>
+    </div>
    
+    <br />
+    <br />
+    Animation using ng-show
+
+    <input type="checkbox" ng-model="checked" />
+    <br /> <br />
+    <a ng-click="testAnimationCtrl.toggleShow();" href="">
+        toggle screen show
+    </a>
+
+    <div class="animate-FadeIn-Toggle-ngshow" ng-show="testAnimationCtrl.showStatus">
+        <div ng-include src="'Page_Templates/Default_Page/third.html'"></div>
+    </div>
+
 </div>

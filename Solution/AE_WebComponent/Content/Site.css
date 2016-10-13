@@ -43,24 +43,24 @@ textarea {
     100% {opacity:1; color: green}
 }
 @keyframes animateFadeIn-leave {
-    0% {opacity: 1;}
+    0% {opacity: 1; color:green}
     50% { opacity:0; color:blue}
     100% {opacity: 0; color: black}
 }
 @-webkit-keyframes animateFadeIn-leave {
-    0% {opacity: 1;}
+    0% {opacity: 1;color :green}
     50% { opacity:0; color:blue}
     100% {opacity: 0; color: black}
 }
 
 
-/*Animation Keywords*/
-.animateFadeIn.ng-enter {
+/*Animation Keywords For Staggering*/
+.animateStagFadeIn.ng-enter {
     opacity:0;
     -webkit-animation: 6000ms animateFadeIn-enter;
     animation: 6000ms animateFadeIn-enter;
 }
-.animateFadeIn.ng-enter-stagger {
+.animateStagFadeIn.ng-enter-stagger {
     -webkit-animation-delay:10000ms;
     animation-delay:10000ms;
 
@@ -68,7 +68,39 @@ textarea {
     -webkit-animation-duration:0;
     animation-duration:0;
 }
-.animateFadeIn.ng-leave {
+.animateStagFadeIn.ng-leave {
     -webkit-animation: 4000ms animateFadeIn-leave;
     animation: 4000ms animateFadeIn-leave;
+}
+
+
+/*Animation Keywords*/
+.animateFadeIn.ng-enter {
+    -webkit-animation: 6000ms animateFadeIn-enter;
+    animation: 6000ms animateFadeIn-enter;
+}
+.animateFadeIn.ng-leave {
+    -webkit-animation: 6000ms animateFadeIn-leave;
+    animation: 6000ms animateFadeIn-leave;
+}
+
+
+/*Animation Keywords For Toggle*/
+.animateFadeInToggle.ng-hide-add {
+    -webkit-animation: 2000ms animateFadeIn-leave;
+    animation: 2000ms animateFadeIn-leave;
+}
+.animateFadeIn.ng-hide-remove {
+    -webkit-animation: 2000ms animateFadeIn-enter;
+    animation: 2000ms animateFadeIn-enter;
+}
+
+/*Animation Keywords For Toggle ng-show*/
+.animate-FadeIn-Toggle-ngshow {
+    -webkit-animation: 10000ms animateFadeIn-enter;
+    animation: 10000ms animateFadeIn-enter;
+}
+.animate-FadeIn-Toggle-ngshow.ng-hide {
+    -webkit-animation: 10000ms animateFadeIn-leave;
+    animation: 10000ms animateFadeIn-leave;
 }
