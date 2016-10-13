@@ -25,3 +25,17 @@ C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\De
 C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_Web.Tests\obj\Debug\AE_Web.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_Web.Tests\obj\Debug\AE_Web.Tests.dll
 C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_Web.Tests\obj\Debug\AE_Web.Tests.pdb
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\Debug\AE_Web.Tests.dll.config
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\Debug\AE_Web.Tests.dll
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\Debug\AE_Web.Tests.pdb
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\Debug\Castle.Core.dll
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\Debug\EntityFramework.dll
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\Debug\EntityFramework.SqlServer.dll
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\Debug\Moq.dll
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\Debug\Castle.Core.xml
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\Debug\EntityFramework.xml
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\Debug\EntityFramework.SqlServer.xml
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\bin\Debug\Moq.xml
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\obj\Debug\AE_Web.Tests.csprojResolveAssemblyReference.cache
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\obj\Debug\AE_Web.Tests.dll
+Z:\REF\SandBox\AngularEntity\Solution\AE_Web.Tests\obj\Debug\AE_Web.Tests.pdb

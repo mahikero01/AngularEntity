@@ -126,10 +126,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="heroDetail.html" />
-    <Content Include="heroDetail.js" />
-    <Content Include="index.html" />
-    <Content Include="index.js" />
     <Content Include="Page_Templates\Default_Page\languageDetail.html" />
     <Content Include="Page_Templates\Default_Page\languageList.html" />
     <Content Include="Page_Templates\Default_Page\testAnimation.html" />
@@ -181,13 +177,10 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
-    <Content Include="Test.html" />
-    <Content Include="Test2.html" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
     <None Include="Web.Debug.config">
