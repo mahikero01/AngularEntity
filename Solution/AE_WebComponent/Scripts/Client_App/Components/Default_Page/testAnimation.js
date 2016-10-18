@@ -8,6 +8,25 @@
             this.toggleSwitchStatus = true;
             this.showStatus = true;
 
+            this.items = [{
+                id: 1,
+                label: 'aLabel',
+                
+            }, {
+                id: 2,
+                label: 'bLabel',
+                
+            }
+            , {
+                id: 3,
+                label: 'cLabel',
+
+            }
+            ];
+
+
+            this.id = 3;
+
             this.getInputPage = function () {
                 this.inputPage = 'Page_Templates/Default_Page/third.html';
             };

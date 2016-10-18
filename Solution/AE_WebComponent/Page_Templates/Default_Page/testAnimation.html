@@ -65,4 +65,7 @@
         <div ng-include src="'Page_Templates/Default_Page/third.html'"></div>
     </div>
 
+    <select 
+            ng-options="item.id as item.label for item in testAnimationCtrl.items" ng-model="testAnimationCtrl.id"></select>
+
 </div>
