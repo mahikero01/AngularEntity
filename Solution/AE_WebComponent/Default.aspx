@@ -5,7 +5,11 @@
  <language-list></language-list>
 
    
-  <test-animation></test-animation>
+<div ng-init="rico='12/31/2016'"></div>
+
+  <test-animation init-test-anima="rico"></test-animation>
 
 
+
+    
 </asp:Content>

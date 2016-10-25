@@ -7,7 +7,9 @@
             this.currentSelection = 0;
             this.toggleSwitchStatus = true;
             this.showStatus = true;
+            $('.dateInput').datepicker();
 
+            this.calendar = '12/31/2016'
             this.items = [{
                 id: 1,
                 label: 'aLabel',
@@ -51,6 +53,9 @@
                 this.showStatus = !this.showStatus;
             };
         },
-        controllerAs: 'testAnimationCtrl'
+        controllerAs: 'testAnimationCtrl',
+        bindings: {
+            initTestAnima:'='
+        }
     });
 }(angular.module('angularEntityApp')));

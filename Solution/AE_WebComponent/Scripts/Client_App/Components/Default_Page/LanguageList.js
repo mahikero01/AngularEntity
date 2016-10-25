@@ -9,6 +9,13 @@
             this.clickMe = function () {
                 this.language.name = 'C#';
             };
+
+            this.listings = 
+                {
+                    'firstName': 'Rico',
+                    'lastName' : 'Sarm'
+                }
+            ;
         },
         controllerAs: 'LanguageListCtrl'
     });

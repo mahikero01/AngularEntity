@@ -42,7 +42,8 @@ namespace AE_WebComponent
                     "~/Scripts/Client_App/Services/httpService.js",
                     "~/Scripts/Client_App/Components/Default_Page/languageList.js",
                     "~/Scripts/Client_App/Components/Default_Page/languageDetail.js",
-                    "~/Scripts/Client_App/Components/Default_Page/testAnimation.js"));
+                    "~/Scripts/Client_App/Components/Default_Page/testAnimation.js",
+                    "~/Scripts/Client_App/Components/Default_Page/testDire.js"));
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",
@@ -50,6 +51,22 @@ namespace AE_WebComponent
                 {
                     Path = "~/Scripts/respond.min.js",
                     DebugPath = "~/Scripts/respond.js",
+                });
+
+            ScriptManager.ScriptResourceMapping.AddDefinition(
+                "jquery",
+                new ScriptResourceDefinition
+                {
+                    Path = "~/Scripts/jquery-1.12.4.min.js",
+                    DebugPath = "~/Scripts/jquery-1.12.4.min.js",
+                });
+
+            ScriptManager.ScriptResourceMapping.AddDefinition(
+                "jqueryui",
+                new ScriptResourceDefinition
+                {
+                    Path = "~/Scripts/jquery-ui-1.12.1.min.js",
+                    DebugPath = "~/Scripts/jquery-ui-1.12.1.min.js",
                 });
         }
     }

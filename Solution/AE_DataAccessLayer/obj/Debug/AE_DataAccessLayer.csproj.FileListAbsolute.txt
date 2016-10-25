@@ -37,3 +37,13 @@ C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_DataAccessLayer\bin\
 C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.csprojResolveAssemblyReference.cache
 C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.dll
 C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.pdb
+C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\AE_DataAccessLayer.dll.config
+C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\AE_DataAccessLayer.dll
+C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\AE_DataAccessLayer.pdb
+C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.dll
+C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_DataAccessLayer\obj\Debug\AE_DataAccessLayer.pdb
