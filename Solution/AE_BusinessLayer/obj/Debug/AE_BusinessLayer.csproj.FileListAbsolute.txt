@@ -41,14 +41,3 @@ C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\bin\De
 C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.dll
 C:\Users\sarmife\Documents\GitHub\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.pdb
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\AE_BusinessLayer.dll
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\AE_BusinessLayer.pdb
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\AE_DataAccessLayer.dll
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\EntityFramework.dll
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\AE_DataAccessLayer.pdb
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\EntityFramework.xml
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.csprojResolveAssemblyReference.cache
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.dll
-C:\Users\Mahikero01\Documents\SandBox\AngularEntity\Solution\AE_BusinessLayer\obj\Debug\AE_BusinessLayer.pdb

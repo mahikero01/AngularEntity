@@ -3,6 +3,7 @@ using AE_DataAccessLayer;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Web;
 
 namespace AE_Web
 {
@@ -16,7 +17,7 @@ namespace AE_Web
             currentUser = currentUser.Remove(0, currentUser.IndexOf('\\') + 1);
             Session["currentUserName"] = currentUser;
 
-            Language.userName = currentUser;
+            //Language.userName = currentUser;
             //if (Request.QueryString["fname"] != null)
 
             //{
@@ -28,12 +29,26 @@ namespace AE_Web
         public static string GetSession()
         {
             string msg = "";
+            HttpContext context = HttpContext.Current;
+            string namenow = (string)context.Session["currentUserName"];
 
-            msg = JsonConvert.SerializeObject(Language.userName);
+            msg = JsonConvert.SerializeObject(namenow);
 
             return msg;
         }
 
+        [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
+        public static string ChangeSession()
+        {
+            string msg = "";
+            HttpContext context = HttpContext.Current;
+            context.Session["currentUserName"] = "wrong";
+            string namenow = (string)context.Session["currentUserName"];
+
+            msg = JsonConvert.SerializeObject(namenow);
+
+            return msg;
+        }
 
         [System.Web.Services.WebMethodAttribute(), System.Web.Script.Services.ScriptMethodAttribute()]
         public static string NewLanguageEntry(AE_Languages dataReceive)

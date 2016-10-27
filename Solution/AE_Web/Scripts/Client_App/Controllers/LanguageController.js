@@ -38,21 +38,51 @@
                 httpService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
             });
 
-        httpService.getData(languagePageUrl, "FillUpLanguageCombo")
-            .success(function (data, status, headers, config) {
-                $scope.LanguagePage.Languages = JSON.parse(data.d);
-            })
-            .error(function (data, status, headers, config) {
-                httpService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
-            });
+        //httpService.getData(languagePageUrl, "FillUpLanguageCombo")
+        //    .success(function (data, status, headers, config) {
+        //        $scope.LanguagePage.Languages = JSON.parse(data.d);
+        //    })
+        //    .error(function (data, status, headers, config) {
+        //        httpService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
+        //    });
 
-        httpService.getData(languagePageUrl, "FillUpCompleteLanguageCombo")
+        //httpService.getData(languagePageUrl, "FillUpCompleteLanguageCombo")
+        //    .success(function (data, status, headers, config) {
+        //        $scope.LanguagePage.LanguageObjects = JSON.parse(data.d);
+        //    })
+        //    .error(function (data, status, headers, config) {
+        //        httpService.failedXHR(status, languagePageUrl, "FillUpCompleteLanguageCombo");
+        //    });
+
+        $scope.changename = function () {
+            //debugger;
+            httpService.getData(languagePageUrl, "ChangeSession")
             .success(function (data, status, headers, config) {
-                $scope.LanguagePage.LanguageObjects = JSON.parse(data.d);
+                // $scope.LanguagePage.LanguageObjects = JSON.parse(data.d);
+                $scope.LanguagePage.sessionName = JSON.parse(data.d);
             })
             .error(function (data, status, headers, config) {
                 httpService.failedXHR(status, languagePageUrl, "FillUpCompleteLanguageCombo");
             });
+
+            //httpService.getData(languagePageUrl, "GetSession")
+            //.success(function (data, status, headers, config) {
+            //    $scope.LanguagePage.sessionName = JSON.parse(data.d);
+            //})
+            //.error(function (data, status, headers, config) {
+            //    httpService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
+            //});
+        };
+
+        $scope.getNowsession = function () {
+            httpService.getData(languagePageUrl, "GetSession")
+            .success(function (data, status, headers, config) {
+                $scope.LanguagePage.sessionName = JSON.parse(data.d);
+            })
+            .error(function (data, status, headers, config) {
+                httpService.failedXHR(status, languagePageUrl, "FillUpLanguageCombo");
+            });
+        };
 
         $scope.create = function () {
             httpService.sendGetData(languagePageUrl, "NewLanguageEntry", $scope.Create, "dataReceive")

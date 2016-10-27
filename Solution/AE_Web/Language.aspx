@@ -22,6 +22,12 @@
 
         <br />
 
+        <a ng-click="changename()" href="#">clikc this to chnage session</a>
+        <br />
+
+        <a ng-click="getNowsession()" href="#">click this to get seeission now</a>
+        <br/>
+        <br/>
         {{LanguagePage.Test }}
 
         <br /> <br />
