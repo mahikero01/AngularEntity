@@ -174,6 +174,7 @@
     <Content Include="Page_Templates\Default_Page\second.html" />
     <Content Include="Page_Templates\Default_Page\testAnimation.html" />
     <Content Include="Page_Templates\Default_Page\testDire.html" />
+    <Content Include="Page_Templates\Default_Page\testPagination.html" />
     <Content Include="Page_Templates\Default_Page\third.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
@@ -193,6 +194,7 @@
     <Content Include="Scripts\Client_App\Components\Default_Page\languageList.js" />
     <Content Include="Scripts\Client_App\Components\Default_Page\testAnimation.js" />
     <Content Include="Scripts\Client_App\Components\Default_Page\testDire.js" />
+    <Content Include="Scripts\Client_App\Components\Default_Page\testPagination.js" />
     <Content Include="Scripts\Client_App\Services\httpService.js" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />

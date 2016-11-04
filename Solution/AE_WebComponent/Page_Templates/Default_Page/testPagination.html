@@ -1,0 +1,12 @@
+﻿<table class="table">
+    <tr ng-repeat="row in testPaginationCtrl.data.slice(((testPaginationCtrl.currentPage-1)*testPaginationCtrl.itemsPerPage), ((testPaginationCtrl.currentPage)*testPaginationCtrl.itemsPerPage))">
+        <td>{{row.name}}</td>
+        <td>{{row.id}}</td>
+    </tr>
+    <pagination total-items="testPaginationCtrl.totalItems"
+                ng-model="testPaginationCtrl.currentPage"
+                class="pagination-sm"
+                items-per-page="testPaginationCtrl.itemsPerPage">
+
+    </pagination>
+</table>

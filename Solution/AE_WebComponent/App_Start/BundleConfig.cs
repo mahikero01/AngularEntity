@@ -38,14 +38,15 @@ namespace AE_WebComponent
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/Scripts/angular.min.js",
                     "~/Scripts/angular-animate.min.js",
-                    "~/Scripts/angular-ui/ui.bootstrap-tpls.min.js",
-                    //"~/Scripts/angular-ui/ui.bootstrap.min.js",
+                    "~/Scripts/angular-ui/ui-bootstrap-tpls.min.js",
+                    "~/Scripts/angular-ui/ui.bootstrap.min.js",
                     "~/Scripts/Client_App/angularEntityApp.js",
                     "~/Scripts/Client_App/Services/httpService.js",
                     "~/Scripts/Client_App/Components/Default_Page/languageList.js",
                     "~/Scripts/Client_App/Components/Default_Page/languageDetail.js",
                     "~/Scripts/Client_App/Components/Default_Page/testAnimation.js",
-                    "~/Scripts/Client_App/Components/Default_Page/testDire.js"));
+                    "~/Scripts/Client_App/Components/Default_Page/testDire.js",
+                    "~/Scripts/Client_App/Components/Default_Page/testPagination.js"));
 
             ScriptManager.ScriptResourceMapping.AddDefinition(
                 "respond",
