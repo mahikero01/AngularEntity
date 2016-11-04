@@ -45,6 +45,7 @@ namespace AE_Web
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                     "~/Scripts/angular.min.js",
                     "~/Scripts/angular-animate.min.js",
+                    "~/Scripts/angular-ui/ui.bootstrap-tpls.min.js",
                     "~/Scripts/Client_App/angularEntityApp.js",
                     "~/Scripts/Client_App/Services/httpService.js",
                     "~/Scripts/Client_App/Services/fxService.js",

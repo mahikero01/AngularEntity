@@ -113,12 +113,17 @@
   <ItemGroup>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="Page_Templates\first.html" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Language.aspx" />
     <Content Include="Page_Templates\TestTemplate.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\Client_App\angularEntityApp.js" />
     <Content Include="Scripts\Client_App\Services\fxService.js" />
     <Content Include="Scripts\Client_App\Controllers\LanguageController.js" />

@@ -1,5 +1,5 @@
 ﻿(function () {
-    var app = angular.module("angularEntityApp", ["ngAnimate"]);
+    var app = angular.module("angularEntityApp", ["ngAnimate","ui.bootstrap"]);
 
     //use the below keyword for tracing angular apps
     //debugger;
